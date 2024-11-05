@@ -3,10 +3,9 @@ source('global.R')
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-  # choose a theme
 
     # Application title
-    titlePanel(h1("Health of the Canadian Information Ecosystem (CIE)")),
+    titlePanel(h1("Health of the Canadian Information Ecosystem (CIE)", align = "center")),
   
   br(),
   br(),

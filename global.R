@@ -3,6 +3,8 @@
 suppressPackageStartupMessages({
   library(shiny)
   library(shinyWidgets)
+  library(shinylive)
+  library(httpuv)
   library(tidyverse)
   library(vroom)
   library(plotly)
