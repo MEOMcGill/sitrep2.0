@@ -6,18 +6,18 @@ suppressPackageStartupMessages({
   library(shinylive)
   library(httpuv)
   library(tidyverse)
-  library(vroom)
   library(plotly)
   library(ggtext)
   library(systemfonts)
   library(extrafont)
   library(showtext)
   library(ggrepel)
+  library(here)
 })
 
 
 # load data
-df <- vroom("sitrep_measures.csv")
+df <- read_csv(here("sitrep_measures.csv"))
 
 # clean data for vulnerability
 vulnerability <- c("Segmentation",
