@@ -1,17 +1,4 @@
-# load packages 
-
-library(shiny)
-library(shinyWidgets)
-library(tidyverse)
-library(plotly)
-library(ggtext)
-library(showtext)
-library(ggrepel)
-
-# fonts
-font_add_google("Poppins", "poppins")
-showtext_auto()
-showtext_opts(dpi = 300)
+source('global.R')
 
 
 # Define UI for application that draws a histogram

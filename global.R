@@ -1,10 +1,18 @@
-#load packages for data wrangling
-library(tidyverse)
-library(vroom)
-library(systemfonts)
-library(extrafont)
-library(showtext)
-library(ggrepel)
+#load packages 
+
+suppressPackageStartupMessages({
+  library(shiny)
+  library(shinyWidgets)
+  library(tidyverse)
+  library(vroom)
+  library(plotly)
+  library(ggtext)
+  library(systemfonts)
+  library(extrafont)
+  library(showtext)
+  library(ggrepel)
+})
+
 
 # load data
 df <- vroom("sitrep_measures.csv")
@@ -24,9 +32,10 @@ df_vulnerability <- df |>
   arrange(month) |>
   select(-c(shown_value, caption, img_label))
 
-# add fonts 
-font_add_google("Poppins")
+# fonts
+font_add_google("Poppins", "poppins")
 showtext_auto()
+showtext_opts(dpi = 300)
 
 # theme_set
 theme_set(theme_update(text = element_text(family = "Poppins")))
@@ -43,19 +52,6 @@ color_list <- list(
   "toxicity" = "#78494D"
 )
 
-party_colors = c("Commentariat" = "#7f7f7f",
-                 "Bloc Québécois" = "#19b1c2", 
-                 "People's Party" = "#442d7b",
-                 "Green" = "#3d9b35", 
-                 "NDP" = "#f58220",
-                 "Conservative" = "#142F52", 
-                 "Liberal" = "#d71b1e",
-                 "Media" = "#7f7f7f",
-                 "Other" = "#7f7f7f",
-                 "Russia" = "#E4181C",
-                 "China" = "#ffcc00",
-                 "India" = "#009933",
-                 "Canadian" = "white")
 
 # create a dataframe for labels
 
