@@ -86,10 +86,19 @@ server <- function(input, output) {
       theme_minimal(base_family = "poppins", base_size = 12) +
       theme(legend.position = "none")
     
+    filtered_data <- reactive({
+      df_end |>
+        filter(title == input$title)
+    })
+    
     if (input$title == "Inequality") {
       plot <- plot +
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = -0.05) +
         labs(x = "",
              y = "gini coefficient",
              title = "Inequality: How skewed is the CIE towards a small set of accounts?")
@@ -98,6 +107,10 @@ server <- function(input, output) {
       plot <- plot + 
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.05) +
         labs(x = "",
              y = "gini coefficient",
              title = "Segmentation: How divided into distinct communities is the CIE?")
@@ -106,6 +119,10 @@ server <- function(input, output) {
       plot <- plot + 
         scale_y_continuous(limits = c(0,0.3),
                            breaks = seq(0, 0.3, 0.05)) +
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.01) +
         labs(x = "",
              y = "",
              title = "Insularity: How insular are political parties relative to one another in the CIE?")
@@ -113,6 +130,10 @@ server <- function(input, output) {
       plot <- plot +
         scale_y_continuous(limits = c(0, 0.1),
                            breaks = seq(0, 0.1, 0.05)) +
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.005) +
         labs(x = "",
              y = "",
              title = "Toxic speech: How prevalent is toxicity in the CIE?")

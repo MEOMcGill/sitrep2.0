@@ -60,7 +60,7 @@ party_colors = c("Commentariat" = "#7f7f7f",
 # create a dataframe for labels
 
 df_end <- df_vulnerability |>
-  filter(month == "September") |>
+  filter(month == "April") |>
   mutate(label = case_when(
     measure == "segmentation" ~ "Segmentation",
     measure == "overall_inequality" ~ "Overall inequality",
