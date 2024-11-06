@@ -2,6 +2,7 @@
 
 suppressPackageStartupMessages({
   library(shiny)
+  library(rsconnect)
   library(tidyverse)
   library(plotly)
   library(ggtext)
