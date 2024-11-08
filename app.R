@@ -35,9 +35,12 @@ ui <- fluidPage(
         br(),
         br(),
         
+        # add a text output
+        span(textOutput("text"), style = "color:FAF9F6; font-style: italic; font-size: 15px;"),
+        
         # add text output
-        span(textOutput("text"), style = "color:#467742"),
-        style = "background-color: black;"
+        span(textOutput("text1"), style = "color:#467742"),
+        style = "background-color: black; border: black; "
       ),
         # Show a plot of the generated distribution
         mainPanel(
@@ -65,9 +68,18 @@ server <- function(input, output) {
   output$text <- renderText({
     
     text <- rval_text() |>
-      select(text) |>
+      select(subtitle) |>
       toString()
-      print(text)
+    
+  })
+  
+  # text output
+  output$text1 <- renderText({
+    
+    text1 <- rval_text() |>
+      select(text) |>
+      toString() 
+    
     })
   
   # plot output
@@ -98,7 +110,7 @@ server <- function(input, output) {
                            breaks = seq(0, 1, 0.2)) +
         labs(y = "gini coefficient",
              title = "Inequality") 
-        
+      
     } else if (input$title == "Segmentation") {
       plot <- plot + 
         scale_y_continuous(limits = c(0,1),

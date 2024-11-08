@@ -8,11 +8,11 @@ suppressPackageStartupMessages({
 # load data
 df <- read_csv(here("sitrep_measures.csv")) |>
   group_by(month, year, measure) |>
-  slice(1)
+  slice(1) 
 
 # clean data for vulnerability
-vulnerability <- c("Segmentation",
-                   "Inequality",
+vulnerability <- c("Inequality",
+                   "Segmentation",
                    "Insularity",
                    "Toxic speech",
                    "Division",
@@ -55,24 +55,24 @@ df_vulnerability <- df |>
 # save the latest csv and load the app directly from the clean .csv to make it faster
 write_csv(df_vulnerability, "df_vulnerability.csv")
 
-
-# create a dataframe for labels
-
-df_label <- df_vulnerability |>
-  filter(month == "October") 
-
-# save the latest csv and load the app directly from the clean .csv to make it faster
-write_csv(df_label, "df_label.csv")
-
-
 # create a df for text
 
 df_text <- tibble(
   title = vulnerability,
-  text = c("We evaluate inequality using the gini coefficient 
+  subtitle = c(
+    "How skewed is the CIE towards a small set of accounts?",
+    "How divided is the CIE into distinct communities?",
+    "How insular are major political parties relative to one another?",
+    "How prevalent is toxic speech in the CIE?",
+    "How people feel about their own political party versus other parties?",
+    "To what extent do people avoid political and public affairs news?",
+    "How much do people trust information gatekeepers?",
+    "To what extent do people avoid political discussion and opinion sharing?"
+  ),
+  text = c("We evaluate inequality using the Gini coefficient 
            (the extent influence within an information ecosystem deviates from a perfectly even distribution). 
            The scale ranges from 0 (each entity has equal influence) to 1 (a single entity has all the influence). 
-           Fewer information sources (high value) severely restricts information flows, which can lead to faster spread 
+           Fewer information sources (high value) severely restrict information flows, which can lead to faster spread 
            and deeper penetration of misinformation.", 
            "We evaluate polarization through segmentation (the extent a network is divided into distinct communities, 
            0=low segmentation and 1=high segmentation).",
@@ -87,7 +87,7 @@ df_text <- tibble(
 
 write_csv(df_text, "df_text.csv")
 
-
+# optional color palette
 
 color_list <- list(
   "insularity_cpc" = "#142F52",

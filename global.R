@@ -47,27 +47,6 @@ color_list <- list(
   "News Media" = "#90AD8E"  
 )
 
-
-# add explanatory text 
-
-inequality <- str_wrap("We evaluate inequality using the gini coefficient 
-(the extent influence within an information ecosystem deviates from a perfectly even distribution). 
-The scale ranges from 0 (each entity has equal influence) to 1 (a single entity has all the influence). 
-Fewer information sources (high value) severely restricts information flows, which can lead to faster spread 
-and deeper penetration of misinformation.", 100, width = 2.5) 
-
-segmentation <- str_wrap("We evaluate polarization through segmentation 
-                         (the extent a network is divided into distinct communities, 
-                         0=low segmentation and 1=high segmentation).", 100, width = 2.5)
-
-insularity <- str_wrap("We evaluate insularity (the extent political party families 
-                       engage with others outside their political party, with a higher number 
-                       representing a more insular party family).", 100, width = 2.5)
-
-toxicity <- str_wrap("We evaluate toxicity through toxic speech (presence of toxic speech among 
-                     posts by political influencers, with lower values indicating lower toxicity).", 100, width = 2.5)
-
-
 ####-------------------------------------------------------------------
 
 shiny_css <- "
