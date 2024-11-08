@@ -1,0 +1,15 @@
+title,text
+Segmentation,"We evaluate inequality using the gini coefficient 
+           (the extent influence within an information ecosystem deviates from a perfectly even distribution). 
+           The scale ranges from 0 (each entity has equal influence) to 1 (a single entity has all the influence). 
+           Fewer information sources (high value) severely restricts information flows, which can lead to faster spread 
+           and deeper penetration of misinformation."
+Inequality,"We evaluate polarization through segmentation (the extent a network is divided into distinct communities, 
+           0=low segmentation and 1=high segmentation)."
+Insularity,"We evaluate insularity (the extent political party families engage with others outside their political party, with a higher number 
+            representing a more insular party family)."
+Toxic speech,"We evaluate toxicity through toxic speech (presence of toxic speech among posts by political influencers, with lower values indicating lower toxicity)."
+Division,Division: Text TBD
+News Avoidance,"We evaluate news avoidance (extent people avoid the news all together, 0=low to 1=high)."
+Trust,"We evaluate trust by asking Canadians about their confidence in information gatekeepers (journalists, media organizations, politicians, and big tech)."
+Chilled speech,"We evaluate chilled speech (extent people avoid online political discussion and opinion sharing, 0=low to 1=high)."

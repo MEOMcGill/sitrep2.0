@@ -61,6 +61,11 @@ server <- function(input, output) {
       filter(title == input$title)
   })
   
+  filtered_data <- reactive({
+    df_label |>
+      filter(title == input$title)
+  })
+  
   # text output
   output$text <- renderText({
     
@@ -80,10 +85,10 @@ server <- function(input, output) {
                  text = paste0("Month: ", month,
                               "\nValue: ", value,
                               "\nMeasure: ", label))) +
-      geom_line(aes(group = label,
-                    color = label),
+      geom_line(aes(group = measure,
+                    color = measure),
                 linewidth = 0.5) +
-      geom_point(aes(color = label),
+      geom_point(aes(color = measure),
                  size = 2.5,
                  stroke = 0.7) +
       scale_color_manual(values = color_list) +
@@ -96,36 +101,62 @@ server <- function(input, output) {
       plot <- plot +
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
-        labs(y = "gini coefficient",
-             title = "Inequality") 
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = -0.05) +
+        labs(
+             y = "gini coefficient",
+
+             title = "Inequality: How skewed is the CIE towards a small set of accounts?") 
         
     } else if (input$title == "Segmentation") {
       plot <- plot + 
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
-        labs(y = "gini coefficient",
-             title = "Segmentation")
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.05) +
+        labs(
+             y = "gini coefficient",
+             title = "Segmentation: How divided into distinct communities is the CIE?")
       
     } else if (input$title == "Insularity") {
       plot <- plot + 
         scale_y_continuous(limits = c(0,0.3),
                            breaks = seq(0, 0.3, 0.05)) +
-        labs(y = "",
-             title = "Insularity")
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.01) +
+        labs(
+             y = "",
+             title = "Insularity: How insular are political parties relative to one another in the CIE?")
       
     } else if (input$title == "Toxic speech") {
       plot <- plot +
         scale_y_continuous(limits = c(0, 0.1),
                            breaks = seq(0, 0.1, 0.05)) +
-        labs(y = "",
-             title = "Toxic speech")
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.005) +
+        labs(
+             y = "",
+             title = "Toxic speech: How prevalent is toxicity in the CIE?")
       
     } else if (input$title == "News Avoidance") {
       plot <- plot +
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders",
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.005) +
+        labs(
+             y = "Percent of survey responders",
              title = "News avoidance")
       
     } else if (input$title == "Chilled speech") {
@@ -133,7 +164,12 @@ server <- function(input, output) {
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders",
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.005) +
+        labs(
+             y = "Percent of survey responders",
              title = "Chilled speech")
       
     } else if (input$title == "Division") {
@@ -141,7 +177,12 @@ server <- function(input, output) {
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders",
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.005) +
+        labs(
+             y = "Percent of survey responders",
              title = "Division")
       
     } else {
@@ -149,13 +190,19 @@ server <- function(input, output) {
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders",
+        geom_text(data = filtered_data(),
+                  aes(label = label,
+                      color = measure),
+                  nudge_y = 0.005) +
+        labs(
+             y = "Percent of survey responders",
              title = "Trust")
-    
+      
+      return(plot)
     }
     
     ggplotly(plot, tooltip = "text") |>
-      layout(legend = list(orientation = 'h', x = 0.2, y = 1.05),
+      layout(legend = list(orientation = 'h', x = 0.5, y = 1.05),
         hoverlabel = list(bgcolor = "white",
                           font = list(size = 15, color = "black")))
   }) 

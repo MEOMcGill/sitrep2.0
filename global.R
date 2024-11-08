@@ -4,33 +4,20 @@ suppressPackageStartupMessages({
   library(shiny)
   library(rsconnect)
   library(tidyverse)
+  library(vroom)
   library(plotly)
   library(ggtext)
   library(systemfonts)
   library(extrafont)
   library(showtext)
   library(ggrepel)
-  library(here)
+  library(scales)
 })
 
-
 # load data
-df <- read_csv(here("sitrep_measures.csv"))
+df_vulnerability <- vroom("df_vulnerability.csv")
+df_text <- vroom("df_text.csv", delim = ",")
 
-# clean data for vulnerability
-vulnerability <- c("Segmentation",
-                   "Inequality",
-                   "Insularity",
-                   "Toxic speech")
-
-df_vulnerability <- df |>
-  filter(title %in% vulnerability) |>
-  mutate(
-         value = as.numeric(value),
-         month = str_to_title(month),
-         month = factor(month, levels = month.abb, labels = month.name)) |>
-  arrange(month) |>
-  select(-c(shown_value, caption, img_label))
 
 # fonts
 font_add_google("Poppins", "poppins")
@@ -43,27 +30,23 @@ theme_set(theme_update(text = element_text(family = "Poppins")))
 # color palette
 
 color_list <- list(
-  "insularity_cpc" = "#142F52",
-  "insularity_lpc" = "#d71b1e",
-  "insularity_ndp" = "#f58220",
-  "news_inequality" = "#3eb1c8",
-  "overall_inequality" = "#6ba539",
-  "segmentation" = "#66c1d4",
-  "toxicity" = "#78494D"
+  "Conservative" = "#142F52",
+  "Liberal" = "#d71b1e",
+  "NDP" = "#f58220",
+  "News inequality" = "#3eb1c8",
+  "Overall inequality" = "#6ba539",
+  "Segmentation" = "#66c1d4",
+  "Toxicity" = "#78494D",
+  "News avoidance" = "#3D4E80",               
+  "Chilled speech" = "#647299",                
+  "Division" = "#8B94B3",
+  "Big Tech" = "#467742",
+  "Elected officials" = "#6C9269",
+  "Information gatekeepers" = "#DAE4D9",
+  "Journalists" = "#B6C9B3",
+  "News Media" = "#90AD8E"  
 )
 
-
-# create a dataframe for labels
-
-df_end <- df_vulnerability |>
-  filter(month == "April") |>
-  mutate(label = case_when(
-    measure == "segmentation" ~ "Segmentation",
-    measure == "overall_inequality" ~ "Overall inequality",
-    measure == "news_inequality" ~ "News inequality",
-    measure == "toxicity" ~ "Toxicity",
-    .default = label
-  ))
 
 # add explanatory text 
 
@@ -84,6 +67,7 @@ insularity <- str_wrap("We evaluate insularity (the extent political party famil
 toxicity <- str_wrap("We evaluate toxicity through toxic speech (presence of toxic speech among 
                      posts by political influencers, with lower values indicating lower toxicity).", 100, width = 2.5)
 
+
 ####-------------------------------------------------------------------
 
 shiny_css <- "
@@ -96,12 +80,13 @@ body {
   font-family: 'Poppins';
 }
   sidebar {
-  background-color: white;
+  background-color: black;
+  color: white;
   }
   
   label, input, button, select { 
   font-family: 'Poppins';
-          color: black; 
+          color: white; 
   }
 "
 
