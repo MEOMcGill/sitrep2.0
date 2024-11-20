@@ -145,7 +145,7 @@ df_text <- tibble(
     "To what extent do people avoid political discussion and opinion sharing?",
     "How concerned are people about misinformation?",
     "How concerned are people about foreign influence?",
-    "How concerned are people about artificial information?"
+    "How concerned are people about artificial intelligence?"
   ),
   text = c("We evaluate inequality using the Gini coefficient 
            (the extent influence within an information ecosystem deviates from a perfectly even distribution). 
