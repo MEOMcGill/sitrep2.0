@@ -2,6 +2,7 @@
 
 suppressPackageStartupMessages({
   library(shiny)
+  library(shinyWidgets)
   library(rsconnect)
   library(tidyverse)
   library(vroom)
@@ -15,7 +16,7 @@ suppressPackageStartupMessages({
 })
 
 # load data
-df_vulnerability <- vroom("df_vulnerability.csv")
+df_app <- vroom("df_app.csv")
 df_text <- vroom("df_text.csv", delim = ",")
 
 
@@ -36,37 +37,52 @@ color_list <- list(
   "News inequality" = "#3eb1c8",
   "Overall inequality" = "#6ba539",
   "Segmentation" = "#66c1d4",
-  "Toxicity" = "#78494D",
+  "Toxicity" = "#8B94B3",
   "News avoidance" = "#3D4E80",               
   "Chilled speech" = "#647299",                
   "Division" = "#8B94B3",
-  "Big Tech" = "#467742",
-  "Elected officials" = "#6C9269",
-  "Information gatekeepers" = "#DAE4D9",
-  "Journalists" = "#B6C9B3",
-  "News Media" = "#90AD8E"  
+  "Big Tech" = "#8EDD65",
+  "Elected officials" = "#A4E484",
+  "Information gatekeepers" = "#467742",
+  "Journalists" = "#BBEAA2",
+  "News Media" = "#D1F1C0",
+  "Generative AI" = "#647299",
+  "Misinformation" = "#8B94B3",
+  "Overall" = "#467742",
+  "UK" = "#8EDD65",
+  "USA" = "#A4E484",
+  "China" = "#BBEAA2",
+  "Russia" = "#D1F1C0",
+  "India" = "#E8F7E0"
 )
 
-####-------------------------------------------------------------------
+#=================================================================================
 
 shiny_css <- "
 /* Get a fancy font from Google Fonts */
   @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 body {
-  background-color: black;
-  color: white; 
+  background-color: white;
+  color: black; 
   font-family: 'Poppins';
 }
   sidebar {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   }
   
   label, input, button, select { 
   font-family: 'Poppins';
-          color: white; 
+          color: black; 
   }
+  
+  div[data-value].active {
+  background-color:#009900 !important;
+  color: white;
+}
+
+
 "
 
 
