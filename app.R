@@ -4,7 +4,9 @@ source('global.R')
 ui <- fluidPage(
 
     # Application title
-    titlePanel(h2("Characteristics of Ecosystem Health Over Time", align = "center")),
+    titlePanel(
+      
+      h2(strong("Characteristics of Ecosystem Health Over Time"), align = "center")),
   
   br(),
   br(),
@@ -14,7 +16,12 @@ ui <- fluidPage(
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
+      
       sidebarPanel(
+        
+        span(textOutput("text4"), style = "font-weight:bold; font-size: 20px;"),
+        
+        br(),
         
         # sidebar panel style
         style = "background-color: white; ",
@@ -22,7 +29,7 @@ ui <- fluidPage(
         # Dropdown 1
         selectInput(
         inputId = "category",
-        label = h4("Ecosystem characteristics"),
+        label = h4(strong("Select category:")),
         choices = c("Vulnerabilities",
                     "Threats",
                     "Engagement with news",
@@ -73,7 +80,7 @@ server <- function(input, output) {
     # Depending on input$input_type, we'll generate a different
     # UI component and send it to the client.
     switch(input$category,
-           "Vulnerabilities" = awesomeRadio("title", "",
+           "Vulnerabilities" = radioButtons("title", h4(strong("Select characteristic:")),
                                             choices = c("Inequality",
                                                         "Segmentation",
                                                         "Insularity",
@@ -83,22 +90,22 @@ server <- function(input, output) {
                                                         "Trust",
                                                         "Chilled speech"),
                                             selected = "Inequality"),
-           "Threats" = awesomeRadio("title", "",
+           "Threats" = radioButtons("title", h4(strong("Select characteristic:")),
                                    choices = c("Concern about misinformation",
                                                "Concern about foreign influence",
                                                "Concern about Generative AI"),
                                    selected = "Concern about misinformation"),
-           "Engagement with news" = awesomeRadio("title", "",
+           "Engagement with news" = radioButtons("title", h4(strong("Select characteristic:")),
                                     choices = c("News seeking",
                                                 "News sharing",
                                                 "News consumption"),
                                     selected = "News seeking"),
-           "Engagement with news outlets" = awesomeRadio("title", "",
+           "Engagement with news outlets" = radioButtons("title", h4(strong("Select characteristic:")),
                                                  choices = c("Top 5 outlets",
                                                              "Local vs National news engagement",
                                                              "Platforms used by outlets"),
                                                  selected = "Top 5 outlets"),
-           "Engagement with politicians" = awesomeRadio("title", "",
+           "Engagement with politicians" = radioButtons("title", h4(strong("Select characteristic:")),
                                                          choices = c("Social media platforms",
                                                                      "Engagement with federal political party leadership",
                                                                      "Engagement with elected party members",
@@ -158,6 +165,11 @@ server <- function(input, output) {
   output$text3 <- renderText({
     text3 <- "Current Month"
   })
+  
+  output$text4 <- renderText({
+    text4 <- "ECOSYSTEM CHARACTERISTICS"
+  })
+  
   
   # plot output
   output$plot <- renderPlotly({
