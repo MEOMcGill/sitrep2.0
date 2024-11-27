@@ -55,12 +55,14 @@ ui <- fluidPage(
           fluidRow(
             column(3,
                    absolutePanel(height = 500,
-                                 wellPanel("Current Month: value \n6-Month Average: value"))),
-          column(9, wellPanel(textOutput("text1")))
+                                 wellPanel(htmlOutput("text7", style = "text-align: center;")))),
+          column(9, span(htmlOutput("text5"), style = "color:#467742; font-size: 16px;"),
+                              textOutput("text1"))
           ),
           
           hr(),
           
+          span(htmlOutput("text6"), style = "color:#467742; font-size: 16px;"),
           textOutput("text2"),
           
           hr()
@@ -93,7 +95,9 @@ server <- function(input, output) {
            "Threats" = radioButtons("title", h4(strong("Select characteristic:")),
                                    choices = c("Concern about misinformation",
                                                "Concern about foreign influence",
-                                               "Concern about Generative AI"),
+                                               "Concern about Generative AI",
+                                               "Linking to known misinformation websites",
+                                               "Discussion about misinformation and foreign interference"),
                                    selected = "Concern about misinformation"),
            "Engagement with news" = radioButtons("title", h4(strong("Select characteristic:")),
                                     choices = c("News seeking",
@@ -101,16 +105,16 @@ server <- function(input, output) {
                                                 "News consumption"),
                                     selected = "News seeking"),
            "Engagement with news outlets" = radioButtons("title", h4(strong("Select characteristic:")),
-                                                 choices = c("Top 5 outlets",
+                                                 choices = c("Top 5 news outlets",
                                                              "Local vs National news engagement",
-                                                             "Platforms used by outlets"),
-                                                 selected = "Top 5 outlets"),
+                                                             "Platforms used by news outlets"),
+                                                 selected = "Top 5 news outlets"),
            "Engagement with politicians" = radioButtons("title", h4(strong("Select characteristic:")),
-                                                         choices = c("Social media platforms",
+                                                         choices = c("Top social media platforms",
                                                                      "Engagement with federal political party leadership",
                                                                      "Engagement with elected party members",
-                                                                     "Politicians vs. news engagement"),
-                                                         selected = "Social media platforms")
+                                                                     "Engagement with Politicians vs. News"),
+                                                         selected = "Top social media platforms")
            )
   })
   
@@ -170,6 +174,22 @@ server <- function(input, output) {
     text4 <- "ECOSYSTEM CHARACTERISTICS"
   })
   
+  output$text5 <- renderText({
+    text5 <- HTML("MEANING<br>What does this data tell us?")
+    })
+  
+  output$text6 <- renderText({
+    text6 <- HTML("MEASUREMENT<br>How do we generate these measures?")
+  })
+  
+  output$text7 <- renderText({
+    text7 <- HTML("<b>Current Month</b>
+                  <br>value<br>
+                  <br>
+                  <b>6-Month Average</b>
+                  <br>
+                  value")
+  })
   
   # plot output
   output$plot <- renderPlotly({
@@ -194,27 +214,23 @@ server <- function(input, output) {
                               "\nMeasure: ", label))) +
       geom_line(aes(group = label,
                     color = label),
-                linewidth = 0.5) +
+                linewidth = 0.5,
+                alpha = 0.7) +
       geom_point(aes(color = label),
                  size = 2.5,
-                 stroke = 0.7)  +
+                 stroke = 0.7,
+                 alpha = 0.7)  +
       scale_color_manual(values = color_list) +
       labs(x = "",
            color = "") +
       theme_minimal(base_family = "poppins", base_size = 12) +
       theme(legend.position = "bottom")
     
-    if (input$title == "Inequality") {
+    if (input$title %in% c("Inequality", "Segmentation")) {
       plot <- plot +
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
-        labs(y = "gini coefficient") 
-      
-    } else if (input$title == "Segmentation") {
-      plot <- plot + 
-        scale_y_continuous(limits = c(0,1),
-                           breaks = seq(0, 1, 0.2)) +
-        labs(y = "gini coefficient")
+        labs(y = "Gini coefficient") 
       
     } else if (input$title == "Insularity") {
       plot <- plot + 
@@ -228,28 +244,23 @@ server <- function(input, output) {
                            breaks = seq(0, 0.1, 0.05)) +
         labs(y = "")
       
-    } else if (input$title == "News avoidance") {
-      plot <- plot +
-        scale_y_continuous(limits = c(0, 100),
-                           breaks = seq(0, 100, 20),
-                           labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders")
+    } else if (input$title == "Linking to known misinformation websites") {
       
-    } else if (input$title == "Chilled speech") {
       plot <- plot +
-        scale_y_continuous(limits = c(0, 100),
-                           breaks = seq(0, 100, 20),
+        scale_y_continuous(limits = c(0, 25),
+                           breaks = seq(0, 25, 5),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders")
+        labs(y = "")
       
-    } else if (input$title == "Division") {
+    } else if(input$title == "Discussion about misinformation and foreign interference") {
+      
       plot <- plot +
-        scale_y_continuous(limits = c(0, 100),
-                           breaks = seq(0, 100, 20),
+        scale_y_continuous(limits = c(0, 1),
+                           breaks = seq(0, 1, 0.5),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders")
+        labs(y = "")  
       
-    } else {
+      } else {
       plot <- plot +
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
@@ -268,3 +279,4 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+

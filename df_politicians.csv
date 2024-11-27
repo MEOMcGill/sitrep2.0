@@ -1,0 +1,161 @@
+year,month,source,measure,label,value,title,year_new,month_year
+2024,Apr,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with federal political party leadership,24,Apr-24
+2024,Apr,Digital,party_member_Bloc Québécois,Bloc Québécois,1.59,Engagement with elected party members,24,Apr-24
+2024,Apr,Digital,party_leader_Conservative,Conservative,68.13,Engagement with federal political party leadership,24,Apr-24
+2024,Apr,Digital,party_member_Conservative,Conservative,43.5,Engagement with elected party members,24,Apr-24
+2024,Apr,Digital,party_leader_Green,Green,0.14,Engagement with federal political party leadership,24,Apr-24
+2024,Apr,Digital,party_member_Green,Green,0.85,Engagement with elected party members,24,Apr-24
+2024,Apr,Digital,politician_platform_Instagram,Instagram,31.39,Top social media platforms,24,Apr-24
+2024,Apr,Digital,party_leader_Liberal,Liberal,18.44,Engagement with federal political party leadership,24,Apr-24
+2024,Apr,Digital,party_member_Liberal,Liberal,35.89,Engagement with elected party members,24,Apr-24
+2024,Apr,Digital,party_leader_NDP,NDP,12.89,Engagement with federal political party leadership,24,Apr-24
+2024,Apr,Digital,party_member_NDP,NDP,18.18,Engagement with elected party members,24,Apr-24
+2024,Apr,Digital,engagement_type_2cat_news outlet,News outlet,53.97,Engagement with Politicians vs. News,24,Apr-24
+2024,Apr,Digital,engagement_type_2cat_politician,Politician,46.03,Engagement with Politicians vs. News,24,Apr-24
+2024,Apr,Digital,politician_platform_TikTok,TikTok,9.9,Top social media platforms,24,Apr-24
+2024,Apr,Digital,politician_platform_Twitter,Twitter,54.03,Top social media platforms,24,Apr-24
+2024,Apr,Digital,politician_platform_YouTube,YouTube,4.68,Top social media platforms,24,Apr-24
+2024,Aug,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.26,Engagement with federal political party leadership,24,Aug-24
+2024,Aug,Digital,party_member_Bloc Québécois,Bloc Québécois,0.7,Engagement with elected party members,24,Aug-24
+2024,Aug,Digital,party_leader_Conservative,Conservative,64.15,Engagement with federal political party leadership,24,Aug-24
+2024,Aug,Digital,party_member_Conservative,Conservative,44.88,Engagement with elected party members,24,Aug-24
+2024,Aug,Digital,party_leader_Green,Green,0.03,Engagement with federal political party leadership,24,Aug-24
+2024,Aug,Digital,party_member_Green,Green,0.81,Engagement with elected party members,24,Aug-24
+2024,Aug,Digital,politician_platform_Instagram,Instagram,37.85,Top social media platforms,24,Aug-24
+2024,Aug,Digital,party_leader_Liberal,Liberal,27.69,Engagement with federal political party leadership,24,Aug-24
+2024,Aug,Digital,party_member_Liberal,Liberal,33.5,Engagement with elected party members,24,Aug-24
+2024,Aug,Digital,party_leader_NDP,NDP,7.87,Engagement with federal political party leadership,24,Aug-24
+2024,Aug,Digital,party_member_NDP,NDP,20.12,Engagement with elected party members,24,Aug-24
+2024,Aug,Digital,engagement_type_2cat_news outlet,News outlet,58.89,Engagement with Politicians vs. News,24,Aug-24
+2024,Aug,Digital,engagement_type_2cat_politician,Politician,41.11,Engagement with Politicians vs. News,24,Aug-24
+2024,Aug,Digital,politician_platform_TikTok,TikTok,12.8,Top social media platforms,24,Aug-24
+2024,Aug,Digital,politician_platform_Twitter,Twitter,46.92,Top social media platforms,24,Aug-24
+2024,Aug,Digital,politician_platform_YouTube,YouTube,2.43,Top social media platforms,24,Aug-24
+2024,Feb,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.4,Engagement with federal political party leadership,24,Feb-24
+2024,Feb,Digital,party_member_Bloc Québécois,Bloc Québécois,1.38,Engagement with elected party members,24,Feb-24
+2024,Feb,Digital,party_leader_Conservative,Conservative,60.61,Engagement with federal political party leadership,24,Feb-24
+2024,Feb,Digital,party_member_Conservative,Conservative,51.17,Engagement with elected party members,24,Feb-24
+2024,Feb,Digital,party_leader_Green,Green,0.03,Engagement with federal political party leadership,24,Feb-24
+2024,Feb,Digital,party_member_Green,Green,0.85,Engagement with elected party members,24,Feb-24
+2024,Feb,Digital,politician_platform_Instagram,Instagram,37.72,Top social media platforms,24,Feb-24
+2024,Feb,Digital,party_leader_Liberal,Liberal,24.09,Engagement with federal political party leadership,24,Feb-24
+2024,Feb,Digital,party_member_Liberal,Liberal,23.06,Engagement with elected party members,24,Feb-24
+2024,Feb,Digital,party_leader_NDP,NDP,14.87,Engagement with federal political party leadership,24,Feb-24
+2024,Feb,Digital,party_member_NDP,NDP,23.53,Engagement with elected party members,24,Feb-24
+2024,Feb,Digital,engagement_type_2cat_news outlet,News outlet,50.3,Engagement with Politicians vs. News,24,Feb-24
+2024,Feb,Digital,engagement_type_2cat_politician,Politician,49.7,Engagement with Politicians vs. News,24,Feb-24
+2024,Feb,Digital,politician_platform_TikTok,TikTok,3.77,Top social media platforms,24,Feb-24
+2024,Feb,Digital,politician_platform_Twitter,Twitter,49.53,Top social media platforms,24,Feb-24
+2024,Feb,Digital,politician_platform_YouTube,YouTube,8.98,Top social media platforms,24,Feb-24
+2024,Jan,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.38,Engagement with federal political party leadership,24,Jan-24
+2024,Jan,Digital,party_member_Bloc Québécois,Bloc Québécois,0.98,Engagement with elected party members,24,Jan-24
+2024,Jan,Digital,party_leader_Conservative,Conservative,72.7,Engagement with federal political party leadership,24,Jan-24
+2024,Jan,Digital,party_member_Conservative,Conservative,36.26,Engagement with elected party members,24,Jan-24
+2024,Jan,Digital,party_leader_Green,Green,0.14,Engagement with federal political party leadership,24,Jan-24
+2024,Jan,Digital,party_member_Green,Green,0.68,Engagement with elected party members,24,Jan-24
+2024,Jan,Digital,politician_platform_Instagram,Instagram,30.56,Top social media platforms,24,Jan-24
+2024,Jan,Digital,party_leader_Liberal,Liberal,17.3,Engagement with federal political party leadership,24,Jan-24
+2024,Jan,Digital,party_member_Liberal,Liberal,43.34,Engagement with elected party members,24,Jan-24
+2024,Jan,Digital,party_leader_NDP,NDP,9.48,Engagement with federal political party leadership,24,Jan-24
+2024,Jan,Digital,party_member_NDP,NDP,18.75,Engagement with elected party members,24,Jan-24
+2024,Jan,Digital,engagement_type_2cat_news outlet,News outlet,58.02,Engagement with Politicians vs. News,24,Jan-24
+2024,Jan,Digital,engagement_type_2cat_politician,Politician,41.98,Engagement with Politicians vs. News,24,Jan-24
+2024,Jan,Digital,politician_platform_TikTok,TikTok,19.45,Top social media platforms,24,Jan-24
+2024,Jan,Digital,politician_platform_Twitter,Twitter,45.85,Top social media platforms,24,Jan-24
+2024,Jan,Digital,politician_platform_YouTube,YouTube,4.14,Top social media platforms,24,Jan-24
+2024,Jul,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.18,Engagement with federal political party leadership,24,Jul-24
+2024,Jul,Digital,party_member_Bloc Québécois,Bloc Québécois,0.43,Engagement with elected party members,24,Jul-24
+2024,Jul,Digital,party_leader_Conservative,Conservative,63.19,Engagement with federal political party leadership,24,Jul-24
+2024,Jul,Digital,party_member_Conservative,Conservative,49.84,Engagement with elected party members,24,Jul-24
+2024,Jul,Digital,party_leader_Green,Green,0.07,Engagement with federal political party leadership,24,Jul-24
+2024,Jul,Digital,party_member_Green,Green,0.87,Engagement with elected party members,24,Jul-24
+2024,Jul,Digital,politician_platform_Instagram,Instagram,39.71,Top social media platforms,24,Jul-24
+2024,Jul,Digital,party_leader_Liberal,Liberal,30.44,Engagement with federal political party leadership,24,Jul-24
+2024,Jul,Digital,party_member_Liberal,Liberal,25.63,Engagement with elected party members,24,Jul-24
+2024,Jul,Digital,party_leader_NDP,NDP,6.12,Engagement with federal political party leadership,24,Jul-24
+2024,Jul,Digital,party_member_NDP,NDP,23.23,Engagement with elected party members,24,Jul-24
+2024,Jul,Digital,engagement_type_2cat_news outlet,News outlet,60.25,Engagement with Politicians vs. News,24,Jul-24
+2024,Jul,Digital,engagement_type_2cat_politician,Politician,39.75,Engagement with Politicians vs. News,24,Jul-24
+2024,Jul,Digital,politician_platform_TikTok,TikTok,4.33,Top social media platforms,24,Jul-24
+2024,Jul,Digital,politician_platform_Twitter,Twitter,51.72,Top social media platforms,24,Jul-24
+2024,Jul,Digital,politician_platform_YouTube,YouTube,4.24,Top social media platforms,24,Jul-24
+2024,Jun,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with federal political party leadership,24,Jun-24
+2024,Jun,Digital,party_member_Bloc Québécois,Bloc Québécois,0.83,Engagement with elected party members,24,Jun-24
+2024,Jun,Digital,party_leader_Conservative,Conservative,57.96,Engagement with federal political party leadership,24,Jun-24
+2024,Jun,Digital,party_member_Conservative,Conservative,42.11,Engagement with elected party members,24,Jun-24
+2024,Jun,Digital,party_leader_Green,Green,0.51,Engagement with federal political party leadership,24,Jun-24
+2024,Jun,Digital,party_member_Green,Green,0.86,Engagement with elected party members,24,Jun-24
+2024,Jun,Digital,politician_platform_Instagram,Instagram,30.57,Top social media platforms,24,Jun-24
+2024,Jun,Digital,party_leader_Liberal,Liberal,21.51,Engagement with federal political party leadership,24,Jun-24
+2024,Jun,Digital,party_member_Liberal,Liberal,31.78,Engagement with elected party members,24,Jun-24
+2024,Jun,Digital,party_leader_NDP,NDP,19.63,Engagement with federal political party leadership,24,Jun-24
+2024,Jun,Digital,party_member_NDP,NDP,24.43,Engagement with elected party members,24,Jun-24
+2024,Jun,Digital,engagement_type_2cat_news outlet,News outlet,62.85,Engagement with Politicians vs. News,24,Jun-24
+2024,Jun,Digital,engagement_type_2cat_politician,Politician,37.15,Engagement with Politicians vs. News,24,Jun-24
+2024,Jun,Digital,politician_platform_TikTok,TikTok,11.35,Top social media platforms,24,Jun-24
+2024,Jun,Digital,politician_platform_Twitter,Twitter,54.03,Top social media platforms,24,Jun-24
+2024,Jun,Digital,politician_platform_YouTube,YouTube,4.05,Top social media platforms,24,Jun-24
+2024,Mar,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.33,Engagement with federal political party leadership,24,Mar-24
+2024,Mar,Digital,party_member_Bloc Québécois,Bloc Québécois,1.57,Engagement with elected party members,24,Mar-24
+2024,Mar,Digital,party_leader_Conservative,Conservative,74.83,Engagement with federal political party leadership,24,Mar-24
+2024,Mar,Digital,party_member_Conservative,Conservative,49.07,Engagement with elected party members,24,Mar-24
+2024,Mar,Digital,party_leader_Green,Green,0.12,Engagement with federal political party leadership,24,Mar-24
+2024,Mar,Digital,party_member_Green,Green,0.85,Engagement with elected party members,24,Mar-24
+2024,Mar,Digital,politician_platform_Instagram,Instagram,30,Top social media platforms,24,Mar-24
+2024,Mar,Digital,party_leader_Liberal,Liberal,15.08,Engagement with federal political party leadership,24,Mar-24
+2024,Mar,Digital,party_member_Liberal,Liberal,31.13,Engagement with elected party members,24,Mar-24
+2024,Mar,Digital,party_leader_NDP,NDP,9.64,Engagement with federal political party leadership,24,Mar-24
+2024,Mar,Digital,party_member_NDP,NDP,17.38,Engagement with elected party members,24,Mar-24
+2024,Mar,Digital,engagement_type_2cat_news outlet,News outlet,53.47,Engagement with Politicians vs. News,24,Mar-24
+2024,Mar,Digital,engagement_type_2cat_politician,Politician,46.53,Engagement with Politicians vs. News,24,Mar-24
+2024,Mar,Digital,politician_platform_TikTok,TikTok,10.33,Top social media platforms,24,Mar-24
+2024,Mar,Digital,politician_platform_Twitter,Twitter,50.23,Top social media platforms,24,Mar-24
+2024,Mar,Digital,politician_platform_YouTube,YouTube,9.43,Top social media platforms,24,Mar-24
+2024,May,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with federal political party leadership,24,May-24
+2024,May,Digital,party_member_Bloc Québécois,Bloc Québécois,0.69,Engagement with elected party members,24,May-24
+2024,May,Digital,party_leader_Conservative,Conservative,66.16,Engagement with federal political party leadership,24,May-24
+2024,May,Digital,party_member_Conservative,Conservative,28,Engagement with elected party members,24,May-24
+2024,May,Digital,party_leader_Green,Green,0.19,Engagement with federal political party leadership,24,May-24
+2024,May,Digital,party_member_Green,Green,0.44,Engagement with elected party members,24,May-24
+2024,May,Digital,politician_platform_Instagram,Instagram,27.79,Top social media platforms,24,May-24
+2024,May,Digital,party_leader_Liberal,Liberal,16.5,Engagement with federal political party leadership,24,May-24
+2024,May,Digital,party_member_Liberal,Liberal,17.58,Engagement with elected party members,24,May-24
+2024,May,Digital,party_leader_NDP,NDP,16.76,Engagement with federal political party leadership,24,May-24
+2024,May,Digital,party_member_NDP,NDP,53.29,Engagement with elected party members,24,May-24
+2024,May,Digital,engagement_type_2cat_news outlet,News outlet,55.05,Engagement with Politicians vs. News,24,May-24
+2024,May,Digital,engagement_type_2cat_politician,Politician,44.95,Engagement with Politicians vs. News,24,May-24
+2024,May,Digital,politician_platform_TikTok,TikTok,31.38,Top social media platforms,24,May-24
+2024,May,Digital,politician_platform_Twitter,Twitter,37.39,Top social media platforms,24,May-24
+2024,May,Digital,politician_platform_YouTube,YouTube,3.43,Top social media platforms,24,May-24
+2024,Oct,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.22,Engagement with federal political party leadership,24,Oct-24
+2024,Oct,Digital,party_member_Bloc Québécois,Bloc Québécois,1.03,Engagement with elected party members,24,Oct-24
+2024,Oct,Digital,party_leader_Conservative,Conservative,58.91,Engagement with federal political party leadership,24,Oct-24
+2024,Oct,Digital,party_member_Conservative,Conservative,48.97,Engagement with elected party members,24,Oct-24
+2024,Oct,Digital,party_leader_Green,Green,0.54,Engagement with federal political party leadership,24,Oct-24
+2024,Oct,Digital,party_member_Green,Green,0.88,Engagement with elected party members,24,Oct-24
+2024,Oct,Digital,politician_platform_Instagram,Instagram,30.56,Top social media platforms,24,Oct-24
+2024,Oct,Digital,party_leader_Liberal,Liberal,30.05,Engagement with federal political party leadership,24,Oct-24
+2024,Oct,Digital,party_member_Liberal,Liberal,27.84,Engagement with elected party members,24,Oct-24
+2024,Oct,Digital,party_leader_NDP,NDP,10.28,Engagement with federal political party leadership,24,Oct-24
+2024,Oct,Digital,party_member_NDP,NDP,21.28,Engagement with elected party members,24,Oct-24
+2024,Oct,Digital,engagement_type_2cat_news outlet,News outlet,53.15,Engagement with Politicians vs. News,24,Oct-24
+2024,Oct,Digital,engagement_type_2cat_politician,Politician,46.85,Engagement with Politicians vs. News,24,Oct-24
+2024,Oct,Digital,politician_platform_TikTok,TikTok,8.77,Top social media platforms,24,Oct-24
+2024,Oct,Digital,politician_platform_Twitter,Twitter,58,Top social media platforms,24,Oct-24
+2024,Oct,Digital,politician_platform_YouTube,YouTube,2.67,Top social media platforms,24,Oct-24
+2024,Sep,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.36,Engagement with federal political party leadership,24,Sep-24
+2024,Sep,Digital,party_member_Bloc Québécois,Bloc Québécois,1.7,Engagement with elected party members,24,Sep-24
+2024,Sep,Digital,party_leader_Conservative,Conservative,64.7,Engagement with federal political party leadership,24,Sep-24
+2024,Sep,Digital,party_member_Conservative,Conservative,48.16,Engagement with elected party members,24,Sep-24
+2024,Sep,Digital,party_leader_Green,Green,0.1,Engagement with federal political party leadership,24,Sep-24
+2024,Sep,Digital,party_member_Green,Green,0.95,Engagement with elected party members,24,Sep-24
+2024,Sep,Digital,politician_platform_Instagram,Instagram,50.82,Top social media platforms,24,Sep-24
+2024,Sep,Digital,party_leader_Liberal,Liberal,25.92,Engagement with federal political party leadership,24,Sep-24
+2024,Sep,Digital,party_member_Liberal,Liberal,27.5,Engagement with elected party members,24,Sep-24
+2024,Sep,Digital,party_leader_NDP,NDP,8.92,Engagement with federal political party leadership,24,Sep-24
+2024,Sep,Digital,party_member_NDP,NDP,21.69,Engagement with elected party members,24,Sep-24
+2024,Sep,Digital,engagement_type_2cat_news outlet,News outlet,59.2,Engagement with Politicians vs. News,24,Sep-24
+2024,Sep,Digital,engagement_type_2cat_politician,Politician,40.8,Engagement with Politicians vs. News,24,Sep-24
+2024,Sep,Digital,politician_platform_TikTok,TikTok,5.47,Top social media platforms,24,Sep-24
+2024,Sep,Digital,politician_platform_Twitter,Twitter,40.91,Top social media platforms,24,Sep-24
+2024,Sep,Digital,politician_platform_YouTube,YouTube,2.8,Top social media platforms,24,Sep-24
