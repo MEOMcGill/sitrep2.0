@@ -19,7 +19,7 @@ ui <- fluidPage(
       
       sidebarPanel(
         
-        span(textOutput("text4"), style = "font-weight:bold; font-size: 20px;"),
+        span(textOutput("text1"), style = "font-weight:bold; font-size: 20px;"),
         
         br(),
         
@@ -53,17 +53,17 @@ ui <- fluidPage(
           hr(),
           
           fluidRow(
-            column(3,
-                   absolutePanel(height = 500,
-                                 wellPanel(htmlOutput("text7", style = "text-align: center;")))),
-          column(9, span(htmlOutput("text5"), style = "color:#467742; font-size: 16px;"),
-                              textOutput("text1"))
+            column(width = 4,
+                   wellPanel(htmlOutput("current", style = "text-align: center;")),
+                   wellPanel(htmlOutput("average", style = "text-align: center; "))),
+          column(8, span(htmlOutput("text2"), style = "color:#467742; font-size: 16px;"),
+                              textOutput("MEANING"))
           ),
           
           hr(),
           
-          span(htmlOutput("text6"), style = "color:#467742; font-size: 16px;"),
-          textOutput("text2"),
+          span(htmlOutput("text3"), style = "color:#467742; font-size: 16px;"),
+          textOutput("MEASUREMENT"),
           
           hr()
           
@@ -89,20 +89,23 @@ server <- function(input, output) {
                                                         "Toxic speech",
                                                         "Division",
                                                         "News avoidance",
-                                                        "Trust",
-                                                        "Chilled speech"),
+                                                        "Chilled speech",
+                                                        "Trust"),
                                             selected = "Inequality"),
            "Threats" = radioButtons("title", h4(strong("Select characteristic:")),
-                                   choices = c("Concern about misinformation",
+                                   choices = c("Discussion about misinformation and foreign interference",
+                                               "Concern about misinformation",
+                                               "Links to known misinformation websites",
                                                "Concern about foreign influence",
-                                               "Concern about Generative AI",
-                                               "Linking to known misinformation websites",
-                                               "Discussion about misinformation and foreign interference"),
-                                   selected = "Concern about misinformation"),
+                                               "Directed foreign influence",
+                                               "Concern about Generative AI"),
+                                   selected = "Discussion about misinformation and foreign interference"),
            "Engagement with news" = radioButtons("title", h4(strong("Select characteristic:")),
                                     choices = c("News seeking",
                                                 "News sharing",
-                                                "News consumption"),
+                                                "Mediums of weekly news",
+                                                "Sources of weekly news",
+                                                "Social media for news"),
                                     selected = "News seeking"),
            "Engagement with news outlets" = radioButtons("title", h4(strong("Select characteristic:")),
                                                  choices = c("Top 5 news outlets",
@@ -111,9 +114,9 @@ server <- function(input, output) {
                                                  selected = "Top 5 news outlets"),
            "Engagement with politicians" = radioButtons("title", h4(strong("Select characteristic:")),
                                                          choices = c("Top social media platforms",
-                                                                     "Engagement with federal political party leadership",
+                                                                     "Engagement with party leaders",
                                                                      "Engagement with elected party members",
-                                                                     "Engagement with Politicians vs. News"),
+                                                                     "Engagement with Politicians vs News"),
                                                          selected = "Top social media platforms")
            )
   })
@@ -122,16 +125,22 @@ server <- function(input, output) {
   #reactive elements
   rval_data <- reactive({
     df_app |>
-      filter(title == input$title)
-  })
+      filter(title %in% input$title)
+    })
   
   rval_text <- reactive({
     df_text |>
-      filter(title == input$title)
+      filter(title %in% input$title)
+    })
+  
+  rval_summary <- reactive({
+    df_summary |>
+      filter(title %in% input$title)
   })
   
   # text output
-  output$TITLE <- renderText({
+  output[["TITLE"]] <- renderText({
+    req(input$title)
     
     TITLE <- rval_text() |>
       select(title_upper) |>
@@ -139,8 +148,8 @@ server <- function(input, output) {
     
   })
   
-  # text output
-  output$subtitle <- renderText({
+  output[["subtitle"]] <- renderText({
+    req(input$title)
     
     subtitle <- rval_text() |>
       select(subtitle) |>
@@ -148,53 +157,63 @@ server <- function(input, output) {
     
   })
   
-  # text output
-  output$text1 <- renderText({
+  output[["MEANING"]] <- renderText({
+    req(input$title)
     
-    text1 <- rval_text() |>
+    MEANING <- rval_text() |>
       select(text) |>
       toString() 
     
     })
   
-  # text output
-  output$text2 <- renderText({
+  output[["MEASUREMENT"]] <- renderText({
+    req(input$title)
     
-    text2 <- rval_text() |>
+    MEASUREMENT <- rval_text() |>
       select(text) |>
       toString() 
     
   })
   
-  output$text3 <- renderText({
-    text3 <- "Current Month"
+  output[["text1"]] <- renderText({
+    text1 <- "ECOSYSTEM CHARACTERISTICS"
   })
   
-  output$text4 <- renderText({
-    text4 <- "ECOSYSTEM CHARACTERISTICS"
+  output[["text2"]] <- renderText({
+    text2 <- HTML("MEANING<br>What does this data tell us?")
   })
   
-  output$text5 <- renderText({
-    text5 <- HTML("MEANING<br>What does this data tell us?")
-    })
-  
-  output$text6 <- renderText({
-    text6 <- HTML("MEASUREMENT<br>How do we generate these measures?")
+  output[["text3"]] <- renderText({
+    text3 <- HTML("MEASUREMENT<br>How do we generate these measures?")
   })
   
-  output$text7 <- renderText({
-    text7 <- HTML("<b>Current Month</b>
-                  <br>value<br>
-                  <br>
-                  <b>6-Month Average</b>
-                  <br>
-                  value")
+  output[["current"]] <- renderText({
+    req(input$title)
+    
+    value <- rval_summary() |>
+      pull(current_month) |>
+      toString()
+    
+    current <- HTML("<b>Current Month</b><br>",
+                    value)
+  })
+  
+  output[["average"]] <- renderText({
+    req(input$title)
+    
+    avg <- rval_summary() |>
+      pull(average) |>
+      toString()
+    
+    average <- HTML("<br><b>6-Month Average</b><br>",
+                    avg)
   })
   
   # plot output
-  output$plot <- renderPlotly({
+  output[["plot"]] <- renderPlotly({
+    req(input$title)
     
-    plot <- rval_data() |>
+    P1 <- rval_data() |>
       # add new month-year at the list every month
       mutate(month_year =  factor(month_year,levels = c("Jan-24",
                                                          "Feb-24",
@@ -207,72 +226,172 @@ server <- function(input, output) {
                                                          "Sep-24",
                                                          "Oct-24")),
              ordered = TRUE) |>
-      ggplot(aes(month_year, 
-                 value,
+      ggplot(aes(x = month_year, 
+                 y = value,
                  text = paste0("Month: ", month,
                               "\nValue: ", value,
                               "\nMeasure: ", label))) +
       geom_line(aes(group = label,
                     color = label),
-                linewidth = 0.5,
+                linewidth = 0.75,
                 alpha = 0.7) +
       geom_point(aes(color = label),
                  size = 2.5,
                  stroke = 0.7,
                  alpha = 0.7)  +
       scale_color_manual(values = color_list) +
-      labs(x = "",
-           color = "") +
+      labs(color = "") +
       theme_minimal(base_family = "poppins", base_size = 12) +
-      theme(legend.position = "bottom")
+      theme(legend.position = "bottom",
+            axis.title.x = element_blank())
     
     if (input$title %in% c("Inequality", "Segmentation")) {
-      plot <- plot +
+      plot <- P1 +
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
         labs(y = "Gini coefficient") 
       
-    } else if (input$title == "Insularity") {
-      plot <- plot + 
-        scale_y_continuous(limits = c(0,0.3),
-                           breaks = seq(0, 0.3, 0.05)) +
+    } else if (input$title %in% "Insularity") {
+      plot <- P1 + 
+        scale_y_continuous(limits = c(0,0.25),
+                           breaks = seq(0, 0.25, 0.05)) +
         labs(y = "")
       
-    } else if (input$title == "Toxic speech") {
-      plot <- plot +
+    } else if (input$title %in% "Toxic speech") {
+      plot <- P1 +
         scale_y_continuous(limits = c(0, 0.1),
                            breaks = seq(0, 0.1, 0.05)) +
         labs(y = "")
       
-    } else if (input$title == "Linking to known misinformation websites") {
+    } else if (input$title %in% "Directed foreign influence") {
+      plot <- P1 +
+        scale_y_continuous(limits = c(0, 10),
+                           breaks = seq(0, 10, 2),
+                           labels = label_percent(scale = 1)) +
+        labs(y = "Percent connections")
       
-      plot <- plot +
+    } else if (input$title %in% "Links to known misinformation websites") {
+      
+      plot <- P1 +
         scale_y_continuous(limits = c(0, 25),
                            breaks = seq(0, 25, 5),
                            labels = label_percent(scale = 1)) +
-        labs(y = "")
+        labs(y = "Percent of links to misinformation sites")
       
-    } else if(input$title == "Discussion about misinformation and foreign interference") {
+    } else if (input$title %in% "Discussion about misinformation and foreign interference") {
       
-      plot <- plot +
+      plot <- P1 +
         scale_y_continuous(limits = c(0, 1),
                            breaks = seq(0, 1, 0.5),
                            labels = label_percent(scale = 1)) +
-        labs(y = "")  
+        labs(y = "Percent references")  
       
-      } else {
-      plot <- plot +
+    } else if (input$title %in% c("Engagement with party leaders",
+                                 "Engagement with elected party members",
+                                 "Platforms used by news outlets", 
+                                 "Top social media platforms")) {
+      plot <- P1 +
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of survey responders")
-    
+        labs(y = "Percent engagement")  
+      
+            
+    } else if (input$title %in% "Top 5 news outlets") {
+      
+      plot <- rval_data() |>
+        mutate(month_year = factor(month_year,levels = c("Jan-24",
+                                                   "Feb-24",
+                                                   "Mar-24",
+                                                   "Apr-24",
+                                                   "May-24",
+                                                   "Jun-24",
+                                                   "Jul-24",
+                                                   "Aug-24",
+                                                   "Sep-24",
+                                                   "Oct-24")),
+               ordered = TRUE) |>
+        group_by(month_year) |>
+        arrange(month_year, desc(value)) |>
+        mutate(rank = row_number(desc(value))) |>
+        filter(rank < max_rank) |>
+        ggplot(aes(x = month_year,
+                   y = value,
+                   text = paste0("Month: ", month,
+                                 "\nValue: ", value,
+                                 "\nMeasure: ", label))) +
+        geom_col(aes(fill = label),
+                 position = "stack",
+                 width = 0.7,
+                 color = "white",
+                 alpha = 0.7) +
+        scale_fill_manual(values = color_list) +
+        labs(fill = "") +
+        theme_minimal(base_family = "poppins", base_size = 12) +
+        theme(legend.position = "bottom",
+              axis.title.x = element_blank()) +
+        scale_y_continuous(limits = c(0, 100),
+                     breaks = seq(0, 100, 20),
+                     labels = label_percent(scale = 1)) +
+        labs(y = "Proportion of percent engagement")
+      
+    } else if (input$title %in% c("Local vs National news engagement", 
+                                  "Engagement with Politicians vs News")) {
+      
+      plot <- rval_data() |>
+        mutate(month_year =  factor(month_year,levels = c("Jan-24",
+                                                          "Feb-24",
+                                                          "Mar-24",
+                                                          "Apr-24",
+                                                          "May-24",
+                                                          "Jun-24",
+                                                          "Jul-24",
+                                                          "Aug-24",
+                                                          "Sep-24",
+                                                          "Oct-24")),
+               ordered = TRUE) |>
+        ggplot(aes(x = month_year,
+                   y = value,
+                   text = paste0("Month: ", month,
+                                 "\nValue: ", value,
+                                 "\nMeasure: ", label))) +
+        geom_col(aes(fill = label),
+                 position = "stack",
+                 width = 0.7,
+                 color = "white",
+                 alpha = 0.7) +
+        scale_fill_manual(values = color_list) +
+        labs(fill = "") +
+        theme_minimal(base_family = "poppins", base_size = 12) +
+        theme(legend.position = "bottom",
+              axis.title.x = element_blank()) +
+        scale_y_continuous(limits = c(0, 100),
+                           breaks = seq(0, 100, 20),
+                           labels = label_percent(scale = 1)) +
+        labs(y = "Proportion of percent engagement") 
+
+    } else {
+      plot <- P1 +
+        scale_y_continuous(limits = c(0, 100),
+                           breaks = seq(0, 100, 20),
+                           labels = label_percent(scale = 1)) +
+        labs(y = "Percent of survey responders") 
+      
     } 
     
     ggplotly(plot, tooltip = "text") |>
       layout(legend = list(orientation = 'h', x = 0.1, y = -0.1, hjust = 0.5),
-        hoverlabel = list(bgcolor = "white",
-                          font = list(size = 15, color = "black")))
+             annotations = list(x = 1,
+                                y = -0.175,
+                                text = ifelse(input$title %in% survey, 
+                                              "Source: Survey data",
+                                              "Source: Social media data"),
+                                showarrow = F,
+                                xref = "paper",
+                                yref = "paper",
+                                font = list(size = 12, color = "red")),
+             hoverlabel = list(bgcolor = "white",
+                               font = list(size = 15, color = "black")))
   }) 
 } 
 

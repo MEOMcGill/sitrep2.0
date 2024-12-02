@@ -1,0 +1,71 @@
+month_year,title,label,current_month,average
+Oct-24,Inequality,Overall inequality,Overall inequality - 0.92,Overall inequality - 0.932
+Oct-24,Segmentation,Segmentation,Segmentation - 0.67,Segmentation - 0.672
+Oct-24,Toxic speech,Toxicity,Toxicity - 0.02,Toxicity - 0.028
+Oct-24,Insularity,Conservative,Conservative - 0.06,Conservative - 0.068
+Oct-24,Insularity,Liberal,Liberal - 0.13,Liberal - 0.138
+Oct-24,Insularity,NDP,NDP - 0.14,NDP - 0.133
+Oct-24,Inequality,News inequality,News inequality - 0.96,News inequality - 0.957
+Oct-24,News avoidance,News avoidance,News avoidance - 29.68,News avoidance - 30.879
+Oct-24,Chilled speech,Chilled speech,Chilled speech - 66.8,Chilled speech - 64.849
+Oct-24,Division,Division,Division - 22.87,Division - 22.565
+Oct-24,Trust,Elected officials,Elected officials - 31.26,Elected officials - 31.015
+Oct-24,Trust,Big Tech,Big Tech - 23.6,Big Tech - 25.742
+Oct-24,Trust,Journalists,Journalists - 54.31,Journalists - 55.423
+Oct-24,Trust,News Media,News Media - 48.4,News Media - 49.778
+Oct-24,Trust,Information gatekeepers,Information gatekeepers - 39.39,Information gatekeepers - 40.492
+Oct-24,Discussion about misinformation and foreign interference,Misinformation references,Misinformation references - 0.45,Misinformation references - 0.35
+Oct-24,Directed foreign influence,China,China - 0.65,China - 0.982
+Oct-24,Directed foreign influence,India,India - 6.55,India - 5.405
+Oct-24,Links to known misinformation websites,Percentage engagement,Percentage engagement - 6.42,Percentage engagement - 12.165
+Oct-24,Directed foreign influence,Russia,Russia - 0.24,Russia - 0.31
+Oct-24,Concern about misinformation,Misinformation,Misinformation - 50.68,Misinformation - 47.361
+Oct-24,Concern about Generative AI,Generative AI,Generative AI - 60.86,Generative AI - 59.24
+Oct-24,Concern about foreign influence,Overall,Overall - 55.81,Overall - 53.048
+Oct-24,Concern about foreign influence,China,China - 62.73,China - 64.356
+Oct-24,Concern about foreign influence,India,India - 44.22,India - 33.093
+Oct-24,Concern about foreign influence,Russia,Russia - 53.79,Russia - 53.516
+Oct-24,Concern about foreign influence,UK,UK - 5.54,UK - 6.567
+Oct-24,Concern about foreign influence,USA,USA - 38.27,USA - 38.826
+Oct-24,News seeking,News seeking,News seeking - 38.41,News seeking - 37.32
+Oct-24,News sharing,News sharing,News sharing - 10.06,News sharing - 10.548
+Oct-24,Sources of weekly news,National,National - 40.71,National - 40.013
+Oct-24,Sources of weekly news,International,International - 31.37,International - 31.787
+Oct-24,Sources of weekly news,Local,Local - 40.36,Local - 41.842
+Oct-24,Social media for news,Social media,Social media - 36.75,Social media - 36.837
+Oct-24,Mediums of weekly news,TV,TV - 55.69,TV - 57.566
+Oct-24,Mediums of weekly news,Radio,Radio - 49.78,Radio - 51.37
+Oct-24,Mediums of weekly news,Print,Print - 29.56,Print - 31.262
+Oct-24,Mediums of weekly news,Digital,Digital - 72.11,Digital - 73.96
+Oct-24,Top 5 news outlets,CBC,CBC - 21.64,CBC - 19.683
+Oct-24,Top 5 news outlets,CTV,CTV - 30.49,CTV - 25.563
+Oct-24,Top 5 news outlets,Global News,Global News - 5.09,Global News - 6.772
+Oct-24,Platforms used by news outlets,Instagram,Instagram - 5.65,Instagram - 5.84
+Oct-24,Local vs National news engagement,Local,Local - 24.6,Local - 28.335
+Oct-24,Top 5 news outlets,Narcity,Narcity - 2.44,Narcity - 2.91
+Oct-24,Local vs National news engagement,National,National - 75.4,National - 71.665
+Oct-24,Top 5 news outlets,National Post,National Post - 1.93,National Post - 1.73
+Oct-24,Top 5 news outlets,Now Toronto,Now Toronto - 4.01,Now Toronto - 3.06
+Oct-24,Top 5 news outlets,Rebel News,Rebel News - 2.97,Rebel News - 5.523
+Oct-24,Top 5 news outlets,The Post Millennial,The Post Millennial - 4.67,The Post Millennial - 6.863
+Oct-24,Platforms used by news outlets,TikTok,TikTok - 60.52,TikTok - 55.182
+Oct-24,Top 5 news outlets,Toronto Sun,Toronto Sun - 2.24,Toronto Sun - 2.855
+Oct-24,Platforms used by news outlets,Twitter,Twitter - 24.01,Twitter - 25.902
+Oct-24,Platforms used by news outlets,YouTube,YouTube - 9.82,YouTube - 13.08
+Oct-24,Top 5 news outlets,blogTO,blogTO - 3.64,blogTO - 5.034
+Oct-24,Engagement with party leaders,Bloc Québécois,Bloc Québécois - 0.22,Bloc Québécois - 0.3
+Oct-24,Engagement with elected party members,Bloc Québécois,Bloc Québécois - 1.03,Bloc Québécois - 0.897
+Oct-24,Engagement with party leaders,Conservative,Conservative - 58.91,Conservative - 62.512
+Oct-24,Engagement with elected party members,Conservative,Conservative - 48.97,Conservative - 43.66
+Oct-24,Engagement with party leaders,Green,Green - 0.54,Green - 0.24
+Oct-24,Engagement with elected party members,Green,Green - 0.88,Green - 0.802
+Oct-24,Top social media platforms,Instagram,Instagram - 30.56,Instagram - 36.217
+Oct-24,Engagement with party leaders,Liberal,Liberal - 30.05,Liberal - 25.352
+Oct-24,Engagement with elected party members,Liberal,Liberal - 27.84,Liberal - 27.305
+Oct-24,Engagement with party leaders,NDP,NDP - 10.28,NDP - 11.597
+Oct-24,Engagement with elected party members,NDP,NDP - 21.28,NDP - 27.34
+Oct-24,Engagement with Politicians vs News,News outlet,News outlet - 53.15,News outlet - 58.232
+Oct-24,Engagement with Politicians vs News,Politician,Politician - 46.85,Politician - 41.768
+Oct-24,Top social media platforms,TikTok,TikTok - 8.77,TikTok - 12.35
+Oct-24,Top social media platforms,Twitter,Twitter - 58,Twitter - 48.162
+Oct-24,Top social media platforms,YouTube,YouTube - 2.67,YouTube - 3.27

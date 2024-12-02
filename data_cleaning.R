@@ -3,11 +3,6 @@
 suppressPackageStartupMessages({
   library(tidyverse)
 })
-
-# load data
-#df <- read_csv(here("sitrep_measures.csv")) |>
-  group_by(month, year, measure) |>
-  slice(1) 
  
 # data file from Aengus from November 24   
 df_DT <- read_csv("sitrep_measures_DT_latest.csv")
@@ -94,7 +89,8 @@ write_csv(df_vulnerability, "df_vulnerability.csv")
 threats <- c(c("Concern about misinformation",
                "Concern about foreign influence",
                "Concern about Generative AI",
-               "Linking to known misinformation websites",
+               "Directed foreign influence",
+               "Links to known misinformation websites",
                "Discussion about misinformation and foreign interference"))
 
 df_threats <- df |>
@@ -102,6 +98,7 @@ df_threats <- df |>
     title,
     "Concern about foreign influence by country" ~ "Concern about foreign influence",
     "Concern about generative AI" ~ "Concern about Generative AI",
+    "Linking to known misinformation websites" ~ "Links to known misinformation websites",
     .default = title)) |>
   mutate(measure = case_match(
     measure,
@@ -149,14 +146,17 @@ write_csv(df_threats, "df_threats.csv")
 
 news_engagement <- c("News seeking",
                      "News sharing",
-                     "News consumption")
+                     "Mediums of weekly news",
+                     "Sources of weekly news",
+                     "Social media for news")
 
 df_news_engagement <- df |>
   mutate(title = case_match(
     title,
     "News Sharing" ~ "News sharing",
-    "Sources of Weekly News" ~ "News consumption",
-    "Social Media for News" ~ "News consumption",
+    "Mediums of Weekly News (digital, print, radio and TV)" ~ "Mediums of weekly news",
+    "Sources of Weekly News" ~ "Sources of weekly news",
+    "Social Media for News" ~ "Social media for news",
     .default = title)) |>
   filter(title %in% news_engagement) |>
   mutate(
@@ -185,7 +185,8 @@ df_news_engagement <- df |>
       "socmed_news" ~ "Social media",
       .default = label
     )) |>
-  select(-c(shown_value, caption, img_label, section, number)) 
+  select(-c(shown_value, caption, img_label, section, number)) |>
+  distinct()
 
 
 # save the latest csv and load the app directly from the clean .csv to make it faster
@@ -247,9 +248,9 @@ write_csv(df_news_outlet, "df_news_outlet.csv")
 # clean and prepare data for engagement with politicians
 
 engagement_politicians = c("Top social media platforms",
-                           "Engagement with federal political party leadership",
+                           "Engagement with party leaders",
                            "Engagement with elected party members",
-                           "Engagement with Politicians vs. News")
+                           "Engagement with Politicians vs News")
 
 df_politicians <- df |>
   mutate(title = case_match(
@@ -262,8 +263,7 @@ df_politicians <- df |>
   )) |>
   mutate(title = case_match(
     title,
-    "Engagement with party leaders" ~ "Engagement with federal political party leadership",
-    "Politicians vs. news engagement" ~ "Engagement with Politicians vs. News",
+    "Politicians vs. news engagement" ~ "Engagement with Politicians vs News",
     .default = title
   )) |>
   filter(title %in% engagement_politicians) |>
@@ -322,11 +322,14 @@ df_text <- tibble(
     "How concerned are people about misinformation?",
     "How concerned are people about foreign influence?",
     "How concerned are people about artificial intelligence?",
+    "To what extent are overt foreign influencers impacting CIE?",
     "How common and popular are web links to known misinformation websites?",
     "How often do people post about misinformation and foreign influence?",
     "How many people seek out information about news?",
     "How actively people share and post news on social media?",
-    "Where do people get their news?",
+    "How many people use each medium weekly for news?",
+    "How many people use each source for weekly news?",
+    "How many people use social media weekly for news?",
     "What are the top 5 Canadian news outlets? What is their share of total engagement?",
     "How skewed is preference for national vs local news?",
     "Which social media platforms are most popular for news?",
@@ -352,11 +355,14 @@ df_text <- tibble(
            "We evaluate the threat of misinformation by measuring Canadians’ concern about misinformation.",
            "We evaluate the threat of foreign influence by measuring concern about foreign governments influencing Canadian media and politics (in general and by country).",
            "We assess the threat of generative AI by measuring concern about AI generated content misleading the general public.",
+           "We assess how ‘close’ foreign accounts are to Canadian accounts in regards to the content they share: we can understand these accounts to be in close proximity to the CIE if they frequently post similar links or discuss certain topics at the same time and in the same way.",
            "We measure how much misinformation is circulated in the CIE by politically influential accounts. We do not measure how much misinformation in total there is in the CIE – that would require us to analyze every single post across multiple platforms in Canada.",
            "We analyze discussion about misinformation to assess the level of attention it is getting. Examining how often prominent accounts within the CIE provides an additional dimension to our analysis of concern about misinformation.",
            "We report the proportion of respondents who say “Occasionally seeking out”, “Often seeking out”, and “Constantly seeking out”.",
            "We calculate the proportion who say “Once or twice a week” or more and then average the proportions to generate an overall news sharing measure.",
            "We calculate the proportion who say “once or twice a week” or more to generate a news consumption score for each news medium.",
+           "Text: TBD",
+           "Text: TBD",
            "We first identify the five outlets that received the highest amount of engagement (as measured by the total number of likes, comments, and shares on their posts), sum them, then divide their engagement by the total amount of engagement received by Canadian news outlets online and multiplying by 100. We are then able to see how much of online Canadian news engagement is generated by the biggest outlets.",
            "We calculate the relative local news engagement by dividing the total amount of engagement generated by local news accounts across our platforms by the total amount of engagement generated by all news accounts.",
            "We evaluate on which platforms Canadian news outlets receive the most engagement to better understand where Canadians seek their online news content. We calculate the platform with the most engagement with Canadian news outlets by summing the total number of likes on posts by Canadian news outlets per platform, and reporting the platform with the most likes.",
