@@ -18,13 +18,15 @@ ui <- fluidPage(
     sidebarLayout(
       
       sidebarPanel(
+        style = "background-color: #FFFFFF; border: none; ",
         
+        wellPanel(style = "background-color: white; border-width: thin; border-color: grey;",
+          
         span(textOutput("text1"), style = "font-weight:bold; font-size: 20px;"),
         
         br(),
         
         # sidebar panel style
-        style = "background-color: white; ",
         
         # Dropdown 1
         selectInput(
@@ -39,6 +41,13 @@ ui <- fluidPage(
         
         # Dynamic ui output based on the first selection
         uiOutput("ui")
+        ),
+        
+        br(),
+        hr(style="border-color: #828282; border-style: double; "),
+        
+        wellPanel(style = "background: white; border-width: thin; border-color: black; ",
+        tableOutput("table"))
       ),
 
         # Show a plot of the generated distribution
@@ -50,23 +59,26 @@ ui <- fluidPage(
           #plot output
           plotlyOutput("plot"),
           
-          hr(),
+          hr(style="border-color: #828282;"),
           
-          fluidRow(
-            column(width = 4,
-                   wellPanel(htmlOutput("current", style = "text-align: center;")),
-                   wellPanel(htmlOutput("average", style = "text-align: center; "))),
-          column(8, span(htmlOutput("text2"), style = "color:#467742; font-size: 16px;"),
-                              textOutput("MEANING"))
-          ),
+        
+          span(htmlOutput("text2"), style = "color:#467742; font-size: 16px;"),
+          textOutput("MEANING"),
           
-          hr(),
+          hr(style="border-color: #828282;"),
           
           span(htmlOutput("text3"), style = "color:#467742; font-size: 16px;"),
           textOutput("MEASUREMENT"),
           
-          hr()
+          hr(style="border-color: #828282;"),
           
+          br(),
+          br(),
+          
+          textOutput("footer"),
+          br()
+          
+
           )
       )
 )
@@ -187,26 +199,21 @@ server <- function(input, output) {
     text3 <- HTML("MEASUREMENT<br>How do we generate these measures?")
   })
   
-  output[["current"]] <- renderText({
+  output[["table"]] <- render_gt({
     req(input$title)
     
-    value <- rval_summary() |>
-      pull(current_month) |>
-      toString()
-    
-    current <- HTML("<b>Current Month</b><br>",
-                    value)
-  })
-  
-  output[["average"]] <- renderText({
-    req(input$title)
-    
-    avg <- rval_summary() |>
-      pull(average) |>
-      toString()
-    
-    average <- HTML("<br><b>6-Month Average</b><br>",
-                    avg)
+    table <- rval_summary() |>
+      select(-title) |>
+      gt() |>
+      gt::cols_label(
+        label = "",
+        current_month = "<b>Current<br>Month<b>",
+        six_month_average = "<b>6-month<br>Average<b>",
+        .fn = md) |>
+      opt_table_font(font = "Poppins") |>
+      tab_header(title = HTML("<b> <span style='color:green; '>Summary<b>")) |>
+      tab_options(table.font.size = 12) |>
+      opt_align_table_header(align = "left") 
   })
   
   # plot output
@@ -245,23 +252,28 @@ server <- function(input, output) {
       theme(legend.position = "bottom",
             axis.title.x = element_blank())
     
-    if (input$title %in% c("Inequality", "Segmentation")) {
+    if (input$title %in% "Inequality") {
       plot <- P1 +
         scale_y_continuous(limits = c(0,1),
                            breaks = seq(0, 1, 0.2)) +
         labs(y = "Gini coefficient") 
+      } else if (input$title %in% "Segmentation") {
+      plot <- P1 +
+        scale_y_continuous(limits = c(0,1),
+                           breaks = seq(0, 1, 0.2)) +
+        labs(y = "Segmentation index")
       
-    } else if (input$title %in% "Insularity") {
+      } else if (input$title %in% "Insularity") {
       plot <- P1 + 
         scale_y_continuous(limits = c(0,0.25),
                            breaks = seq(0, 0.25, 0.05)) +
-        labs(y = "")
+        labs(y = "Insularity index")
       
     } else if (input$title %in% "Toxic speech") {
       plot <- P1 +
         scale_y_continuous(limits = c(0, 0.1),
                            breaks = seq(0, 0.1, 0.05)) +
-        labs(y = "")
+        labs(y = "Toxocity index")
       
     } else if (input$title %in% "Directed foreign influence") {
       plot <- P1 +
@@ -271,12 +283,11 @@ server <- function(input, output) {
         labs(y = "Percent connections")
       
     } else if (input$title %in% "Links to known misinformation websites") {
-      
       plot <- P1 +
         scale_y_continuous(limits = c(0, 25),
                            breaks = seq(0, 25, 5),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of links to misinformation sites")
+        labs(y = "Percent of misinformation site links")
       
     } else if (input$title %in% "Discussion about misinformation and foreign interference") {
       
@@ -333,7 +344,7 @@ server <- function(input, output) {
         scale_y_continuous(limits = c(0, 100),
                      breaks = seq(0, 100, 20),
                      labels = label_percent(scale = 1)) +
-        labs(y = "Proportion of percent engagement")
+        labs(y = "Percent engagement")
       
     } else if (input$title %in% c("Local vs National news engagement", 
                                   "Engagement with Politicians vs News")) {
@@ -379,8 +390,9 @@ server <- function(input, output) {
       
     } 
     
-    ggplotly(plot, tooltip = "text") |>
-      layout(legend = list(orientation = 'h', x = 0.1, y = -0.1, hjust = 0.5),
+    ggplotly(plot, 
+             tooltip = "text") |>
+      layout(legend = list(orientation = 'h', x = 0.01, y = -0.2, hjust = 0.5),
              annotations = list(x = 1,
                                 y = -0.175,
                                 text = ifelse(input$title %in% survey, 
@@ -393,6 +405,12 @@ server <- function(input, output) {
              hoverlabel = list(bgcolor = "white",
                                font = list(size = 15, color = "black")))
   }) 
+  
+  output$footer <- renderText({
+    style = "color:#467742; font-style: bold; font-size: 15px; align: center;"
+    "© Canadian Digital Media Research Network 2024"
+  })
+  
 } 
 
 

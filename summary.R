@@ -14,9 +14,9 @@ df_summary <- df_app |>
   mutate(avg = mean(value),
          avg = round(avg, 3)) |>
   filter(month_year == this_month) |>
-  mutate(current_month = paste0(label," - ", value),
-         average = paste0(label, " - ", avg)) |>
-  select(-c(value, avg))
+  mutate(current_month = value,
+         six_month_average = avg) |>
+  select(-c(value, avg, month_year))
 
 write_csv(df_summary, "df_summary.csv")
 

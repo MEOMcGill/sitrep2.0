@@ -11,6 +11,7 @@ suppressPackageStartupMessages({
   library(extrafont)
   library(showtext)
   library(scales)
+  library(gt)
 })
 
 # load data
@@ -115,7 +116,7 @@ color_list <- list(
   "Narcity" = meo_colors[[5]],
   "Instagram" = party_colors[[4]],
   "TikTok" = meo_colors[[7]],
-  "Twitter" = meo_colors[[1]],
+  "X" = meo_colors[[1]],
   "YouTube" = meo_colors[[8]],
   "Digital" = party_colors[[4]],
   "Print" = meo_colors[[7]],
@@ -154,8 +155,8 @@ body {
   div[data-value].active {
   background-color:#009900 !important;
   color: white;
-}
-
+  }
+  
 "
 
 

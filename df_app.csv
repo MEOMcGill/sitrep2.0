@@ -314,7 +314,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Apr,Digital,top_news_platform_tiktok,TikTok,50.95,Platforms used by news outlets,24,Apr-24
 2024,Apr,Digital,top_outlet_toronto star,Toronto Star,6.52,Top 5 news outlets,24,Apr-24
 2024,Apr,Digital,top_outlet_toronto sun,Toronto Sun,3.2,Top 5 news outlets,24,Apr-24
-2024,Apr,Digital,top_news_platform_twitter,Twitter,29.06,Platforms used by news outlets,24,Apr-24
+2024,Apr,Digital,top_news_platform_twitter,X,29.06,Platforms used by news outlets,24,Apr-24
 2024,Apr,Digital,top_news_platform_youtube,YouTube,14.57,Platforms used by news outlets,24,Apr-24
 2024,Apr,Digital,top_outlet_blogto,blogTO,5.49,Top 5 news outlets,24,Apr-24
 2024,Aug,Digital,top_outlet_cbc,CBC,23.91,Top 5 news outlets,24,Aug-24
@@ -331,7 +331,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Aug,Digital,top_news_platform_tiktok,TikTok,42.75,Platforms used by news outlets,24,Aug-24
 2024,Aug,Digital,top_outlet_toronto sun,Toronto Sun,3.06,Top 5 news outlets,24,Aug-24
 2024,Aug,Digital,top_outlet_true north,True North,2.3,Top 5 news outlets,24,Aug-24
-2024,Aug,Digital,top_news_platform_twitter,Twitter,32.42,Platforms used by news outlets,24,Aug-24
+2024,Aug,Digital,top_news_platform_twitter,X,32.42,Platforms used by news outlets,24,Aug-24
 2024,Aug,Digital,top_news_platform_youtube,YouTube,17.04,Platforms used by news outlets,24,Aug-24
 2024,Feb,Digital,top_outlet_cbc,CBC,14.03,Top 5 news outlets,24,Feb-24
 2024,Feb,Digital,top_outlet_cpac,CPAC,2.17,Top 5 news outlets,24,Feb-24
@@ -346,7 +346,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Feb,Digital,top_news_platform_tiktok,TikTok,45.83,Platforms used by news outlets,24,Feb-24
 2024,Feb,Digital,top_outlet_toronto sun,Toronto Sun,3.72,Top 5 news outlets,24,Feb-24
 2024,Feb,Digital,top_outlet_true north,True North,3.63,Top 5 news outlets,24,Feb-24
-2024,Feb,Digital,top_news_platform_twitter,Twitter,34.23,Platforms used by news outlets,24,Feb-24
+2024,Feb,Digital,top_news_platform_twitter,X,34.23,Platforms used by news outlets,24,Feb-24
 2024,Feb,Digital,top_news_platform_youtube,YouTube,14.35,Platforms used by news outlets,24,Feb-24
 2024,Feb,Digital,top_outlet_blogto,blogTO,5.51,Top 5 news outlets,24,Feb-24
 2024,Jan,Digital,top_outlet_cbc,CBC,13.99,Top 5 news outlets,24,Jan-24
@@ -362,7 +362,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jan,Digital,top_news_platform_tiktok,TikTok,41.51,Platforms used by news outlets,24,Jan-24
 2024,Jan,Digital,top_outlet_toronto sun,Toronto Sun,4.52,Top 5 news outlets,24,Jan-24
 2024,Jan,Digital,top_outlet_true north,True North,3.29,Top 5 news outlets,24,Jan-24
-2024,Jan,Digital,top_news_platform_twitter,Twitter,29.04,Platforms used by news outlets,24,Jan-24
+2024,Jan,Digital,top_news_platform_twitter,X,29.04,Platforms used by news outlets,24,Jan-24
 2024,Jan,Digital,top_news_platform_youtube,YouTube,24.04,Platforms used by news outlets,24,Jan-24
 2024,Jan,Digital,top_outlet_blogto,blogTO,7.3,Top 5 news outlets,24,Jan-24
 2024,Jul,Digital,top_outlet_cbc,CBC,14.44,Top 5 news outlets,24,Jul-24
@@ -377,7 +377,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jul,Digital,top_news_platform_tiktok,TikTok,49.29,Platforms used by news outlets,24,Jul-24
 2024,Jul,Digital,top_outlet_toronto sun,Toronto Sun,3.43,Top 5 news outlets,24,Jul-24
 2024,Jul,Digital,top_outlet_true north,True North,4.11,Top 5 news outlets,24,Jul-24
-2024,Jul,Digital,top_news_platform_twitter,Twitter,29.79,Platforms used by news outlets,24,Jul-24
+2024,Jul,Digital,top_news_platform_twitter,X,29.79,Platforms used by news outlets,24,Jul-24
 2024,Jul,Digital,top_outlet_vancouver is awesome,Vancouver is Awesome,3.45,Top 5 news outlets,24,Jul-24
 2024,Jul,Digital,top_news_platform_youtube,YouTube,17.24,Platforms used by news outlets,24,Jul-24
 2024,Jul,Digital,top_outlet_blogto,blogTO,3.18,Top 5 news outlets,24,Jul-24
@@ -393,7 +393,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jun,Digital,top_news_platform_tiktok,TikTok,62.12,Platforms used by news outlets,24,Jun-24
 2024,Jun,Digital,top_outlet_toronto sun,Toronto Sun,3.92,Top 5 news outlets,24,Jun-24
 2024,Jun,Digital,top_outlet_true north,True North,2.97,Top 5 news outlets,24,Jun-24
-2024,Jun,Digital,top_news_platform_twitter,Twitter,21.87,Platforms used by news outlets,24,Jun-24
+2024,Jun,Digital,top_news_platform_twitter,X,21.87,Platforms used by news outlets,24,Jun-24
 2024,Jun,Digital,top_outlet_vancouver is awesome,Vancouver is Awesome,2.27,Top 5 news outlets,24,Jun-24
 2024,Jun,Digital,top_news_platform_youtube,YouTube,12.87,Platforms used by news outlets,24,Jun-24
 2024,Jun,Digital,top_outlet_blogto,blogTO,5.26,Top 5 news outlets,24,Jun-24
@@ -410,7 +410,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Mar,Digital,top_outlet_toronto star,Toronto Star,5.79,Top 5 news outlets,24,Mar-24
 2024,Mar,Digital,top_outlet_toronto sun,Toronto Sun,3.49,Top 5 news outlets,24,Mar-24
 2024,Mar,Digital,top_outlet_true north,True North,3.05,Top 5 news outlets,24,Mar-24
-2024,Mar,Digital,top_news_platform_twitter,Twitter,31.42,Platforms used by news outlets,24,Mar-24
+2024,Mar,Digital,top_news_platform_twitter,X,31.42,Platforms used by news outlets,24,Mar-24
 2024,Mar,Digital,top_news_platform_youtube,YouTube,13.09,Platforms used by news outlets,24,Mar-24
 2024,Mar,Digital,top_outlet_blogto,blogTO,4.93,Top 5 news outlets,24,Mar-24
 2024,May,Digital,top_outlet_cbc,CBC,13.36,Top 5 news outlets,24,May-24
@@ -426,7 +426,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,May,Digital,top_news_platform_tiktok,TikTok,59.03,Platforms used by news outlets,24,May-24
 2024,May,Digital,top_outlet_toronto sun,Toronto Sun,2.28,Top 5 news outlets,24,May-24
 2024,May,Digital,top_outlet_true north,True North,1.83,Top 5 news outlets,24,May-24
-2024,May,Digital,top_news_platform_twitter,Twitter,26.07,Platforms used by news outlets,24,May-24
+2024,May,Digital,top_news_platform_twitter,X,26.07,Platforms used by news outlets,24,May-24
 2024,May,Digital,top_news_platform_youtube,YouTube,11.11,Platforms used by news outlets,24,May-24
 2024,May,Digital,top_outlet_blogto,blogTO,2.96,Top 5 news outlets,24,May-24
 2024,Oct,Digital,top_outlet_cbc,CBC,21.64,Top 5 news outlets,24,Oct-24
@@ -442,7 +442,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Oct,Digital,top_outlet_the post millennial,The Post Millennial,4.67,Top 5 news outlets,24,Oct-24
 2024,Oct,Digital,top_news_platform_tiktok,TikTok,60.52,Platforms used by news outlets,24,Oct-24
 2024,Oct,Digital,top_outlet_toronto sun,Toronto Sun,2.24,Top 5 news outlets,24,Oct-24
-2024,Oct,Digital,top_news_platform_twitter,Twitter,24.01,Platforms used by news outlets,24,Oct-24
+2024,Oct,Digital,top_news_platform_twitter,X,24.01,Platforms used by news outlets,24,Oct-24
 2024,Oct,Digital,top_news_platform_youtube,YouTube,9.82,Platforms used by news outlets,24,Oct-24
 2024,Oct,Digital,top_outlet_blogto,blogTO,3.64,Top 5 news outlets,24,Oct-24
 2024,Sep,Digital,top_outlet_aptn,APTN,2.21,Top 5 news outlets,24,Sep-24
@@ -458,7 +458,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,top_outlet_the post millennial,The Post Millennial,4.65,Top 5 news outlets,24,Sep-24
 2024,Sep,Digital,top_news_platform_tiktok,TikTok,57.38,Platforms used by news outlets,24,Sep-24
 2024,Sep,Digital,top_outlet_toronto sun,Toronto Sun,2.2,Top 5 news outlets,24,Sep-24
-2024,Sep,Digital,top_news_platform_twitter,Twitter,21.25,Platforms used by news outlets,24,Sep-24
+2024,Sep,Digital,top_news_platform_twitter,X,21.25,Platforms used by news outlets,24,Sep-24
 2024,Sep,Digital,top_news_platform_youtube,YouTube,10.4,Platforms used by news outlets,24,Sep-24
 2024,Sep,Digital,top_outlet_blogto,blogTO,10.13,Top 5 news outlets,24,Sep-24
 2024,Apr,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with party leaders,24,Apr-24
@@ -475,7 +475,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Apr,Digital,engagement_type_2cat_news outlet,News outlet,53.97,Engagement with Politicians vs News,24,Apr-24
 2024,Apr,Digital,engagement_type_2cat_politician,Politician,46.03,Engagement with Politicians vs News,24,Apr-24
 2024,Apr,Digital,politician_platform_TikTok,TikTok,9.9,Top social media platforms,24,Apr-24
-2024,Apr,Digital,politician_platform_Twitter,Twitter,54.03,Top social media platforms,24,Apr-24
+2024,Apr,Digital,politician_platform_Twitter,X,54.03,Top social media platforms,24,Apr-24
 2024,Apr,Digital,politician_platform_YouTube,YouTube,4.68,Top social media platforms,24,Apr-24
 2024,Aug,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.26,Engagement with party leaders,24,Aug-24
 2024,Aug,Digital,party_member_Bloc Québécois,Bloc Québécois,0.7,Engagement with elected party members,24,Aug-24
@@ -491,7 +491,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Aug,Digital,engagement_type_2cat_news outlet,News outlet,58.89,Engagement with Politicians vs News,24,Aug-24
 2024,Aug,Digital,engagement_type_2cat_politician,Politician,41.11,Engagement with Politicians vs News,24,Aug-24
 2024,Aug,Digital,politician_platform_TikTok,TikTok,12.8,Top social media platforms,24,Aug-24
-2024,Aug,Digital,politician_platform_Twitter,Twitter,46.92,Top social media platforms,24,Aug-24
+2024,Aug,Digital,politician_platform_Twitter,X,46.92,Top social media platforms,24,Aug-24
 2024,Aug,Digital,politician_platform_YouTube,YouTube,2.43,Top social media platforms,24,Aug-24
 2024,Feb,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.4,Engagement with party leaders,24,Feb-24
 2024,Feb,Digital,party_member_Bloc Québécois,Bloc Québécois,1.38,Engagement with elected party members,24,Feb-24
@@ -507,7 +507,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Feb,Digital,engagement_type_2cat_news outlet,News outlet,50.3,Engagement with Politicians vs News,24,Feb-24
 2024,Feb,Digital,engagement_type_2cat_politician,Politician,49.7,Engagement with Politicians vs News,24,Feb-24
 2024,Feb,Digital,politician_platform_TikTok,TikTok,3.77,Top social media platforms,24,Feb-24
-2024,Feb,Digital,politician_platform_Twitter,Twitter,49.53,Top social media platforms,24,Feb-24
+2024,Feb,Digital,politician_platform_Twitter,X,49.53,Top social media platforms,24,Feb-24
 2024,Feb,Digital,politician_platform_YouTube,YouTube,8.98,Top social media platforms,24,Feb-24
 2024,Jan,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.38,Engagement with party leaders,24,Jan-24
 2024,Jan,Digital,party_member_Bloc Québécois,Bloc Québécois,0.98,Engagement with elected party members,24,Jan-24
@@ -523,7 +523,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jan,Digital,engagement_type_2cat_news outlet,News outlet,58.02,Engagement with Politicians vs News,24,Jan-24
 2024,Jan,Digital,engagement_type_2cat_politician,Politician,41.98,Engagement with Politicians vs News,24,Jan-24
 2024,Jan,Digital,politician_platform_TikTok,TikTok,19.45,Top social media platforms,24,Jan-24
-2024,Jan,Digital,politician_platform_Twitter,Twitter,45.85,Top social media platforms,24,Jan-24
+2024,Jan,Digital,politician_platform_Twitter,X,45.85,Top social media platforms,24,Jan-24
 2024,Jan,Digital,politician_platform_YouTube,YouTube,4.14,Top social media platforms,24,Jan-24
 2024,Jul,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.18,Engagement with party leaders,24,Jul-24
 2024,Jul,Digital,party_member_Bloc Québécois,Bloc Québécois,0.43,Engagement with elected party members,24,Jul-24
@@ -539,7 +539,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jul,Digital,engagement_type_2cat_news outlet,News outlet,60.25,Engagement with Politicians vs News,24,Jul-24
 2024,Jul,Digital,engagement_type_2cat_politician,Politician,39.75,Engagement with Politicians vs News,24,Jul-24
 2024,Jul,Digital,politician_platform_TikTok,TikTok,4.33,Top social media platforms,24,Jul-24
-2024,Jul,Digital,politician_platform_Twitter,Twitter,51.72,Top social media platforms,24,Jul-24
+2024,Jul,Digital,politician_platform_Twitter,X,51.72,Top social media platforms,24,Jul-24
 2024,Jul,Digital,politician_platform_YouTube,YouTube,4.24,Top social media platforms,24,Jul-24
 2024,Jun,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with party leaders,24,Jun-24
 2024,Jun,Digital,party_member_Bloc Québécois,Bloc Québécois,0.83,Engagement with elected party members,24,Jun-24
@@ -555,7 +555,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jun,Digital,engagement_type_2cat_news outlet,News outlet,62.85,Engagement with Politicians vs News,24,Jun-24
 2024,Jun,Digital,engagement_type_2cat_politician,Politician,37.15,Engagement with Politicians vs News,24,Jun-24
 2024,Jun,Digital,politician_platform_TikTok,TikTok,11.35,Top social media platforms,24,Jun-24
-2024,Jun,Digital,politician_platform_Twitter,Twitter,54.03,Top social media platforms,24,Jun-24
+2024,Jun,Digital,politician_platform_Twitter,X,54.03,Top social media platforms,24,Jun-24
 2024,Jun,Digital,politician_platform_YouTube,YouTube,4.05,Top social media platforms,24,Jun-24
 2024,Mar,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.33,Engagement with party leaders,24,Mar-24
 2024,Mar,Digital,party_member_Bloc Québécois,Bloc Québécois,1.57,Engagement with elected party members,24,Mar-24
@@ -571,7 +571,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Mar,Digital,engagement_type_2cat_news outlet,News outlet,53.47,Engagement with Politicians vs News,24,Mar-24
 2024,Mar,Digital,engagement_type_2cat_politician,Politician,46.53,Engagement with Politicians vs News,24,Mar-24
 2024,Mar,Digital,politician_platform_TikTok,TikTok,10.33,Top social media platforms,24,Mar-24
-2024,Mar,Digital,politician_platform_Twitter,Twitter,50.23,Top social media platforms,24,Mar-24
+2024,Mar,Digital,politician_platform_Twitter,X,50.23,Top social media platforms,24,Mar-24
 2024,Mar,Digital,politician_platform_YouTube,YouTube,9.43,Top social media platforms,24,Mar-24
 2024,May,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with party leaders,24,May-24
 2024,May,Digital,party_member_Bloc Québécois,Bloc Québécois,0.69,Engagement with elected party members,24,May-24
@@ -587,7 +587,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,May,Digital,engagement_type_2cat_news outlet,News outlet,55.05,Engagement with Politicians vs News,24,May-24
 2024,May,Digital,engagement_type_2cat_politician,Politician,44.95,Engagement with Politicians vs News,24,May-24
 2024,May,Digital,politician_platform_TikTok,TikTok,31.38,Top social media platforms,24,May-24
-2024,May,Digital,politician_platform_Twitter,Twitter,37.39,Top social media platforms,24,May-24
+2024,May,Digital,politician_platform_Twitter,X,37.39,Top social media platforms,24,May-24
 2024,May,Digital,politician_platform_YouTube,YouTube,3.43,Top social media platforms,24,May-24
 2024,Oct,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.22,Engagement with party leaders,24,Oct-24
 2024,Oct,Digital,party_member_Bloc Québécois,Bloc Québécois,1.03,Engagement with elected party members,24,Oct-24
@@ -603,7 +603,7 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Oct,Digital,engagement_type_2cat_news outlet,News outlet,53.15,Engagement with Politicians vs News,24,Oct-24
 2024,Oct,Digital,engagement_type_2cat_politician,Politician,46.85,Engagement with Politicians vs News,24,Oct-24
 2024,Oct,Digital,politician_platform_TikTok,TikTok,8.77,Top social media platforms,24,Oct-24
-2024,Oct,Digital,politician_platform_Twitter,Twitter,58,Top social media platforms,24,Oct-24
+2024,Oct,Digital,politician_platform_Twitter,X,58,Top social media platforms,24,Oct-24
 2024,Oct,Digital,politician_platform_YouTube,YouTube,2.67,Top social media platforms,24,Oct-24
 2024,Sep,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.36,Engagement with party leaders,24,Sep-24
 2024,Sep,Digital,party_member_Bloc Québécois,Bloc Québécois,1.7,Engagement with elected party members,24,Sep-24
@@ -619,5 +619,5 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,engagement_type_2cat_news outlet,News outlet,59.2,Engagement with Politicians vs News,24,Sep-24
 2024,Sep,Digital,engagement_type_2cat_politician,Politician,40.8,Engagement with Politicians vs News,24,Sep-24
 2024,Sep,Digital,politician_platform_TikTok,TikTok,5.47,Top social media platforms,24,Sep-24
-2024,Sep,Digital,politician_platform_Twitter,Twitter,40.91,Top social media platforms,24,Sep-24
+2024,Sep,Digital,politician_platform_Twitter,X,40.91,Top social media platforms,24,Sep-24
 2024,Sep,Digital,politician_platform_YouTube,YouTube,2.8,Top social media platforms,24,Sep-24
