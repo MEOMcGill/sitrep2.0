@@ -2,6 +2,8 @@ library(microbenchmark)
 library(profvis)
 
 
+
+
 save(df_text, file = "df_text.RData")
 saveRDS(df_text, "df_text.rds")
 
@@ -33,10 +35,15 @@ benchmark1 <- microbenchmark(
 
 print(benchmark1, signif = 2)
 
-
 profvis({
-  
+  readCSV = utils::read.csv("df_text.csv")
+  readrCSV = readr::read_csv("df_text.csv")
+  vroom = vroom::vroom("df_text.csv")
+  loadRdata = base::load("df_text.RData")
+  readRds = base::readRDS("df_text.rds")
+  fread = data.table::fread("df_text.csv")
 })
+
 
 
 profvis({

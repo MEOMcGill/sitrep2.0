@@ -6,6 +6,7 @@ source('global.R')
 # Define UI for application that draws a histogram
 ui <- fluidPage(
   br(),
+  br(),
 
   # change visual elements
   tags$style(shiny_css),
@@ -13,8 +14,8 @@ ui <- fluidPage(
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
       
-      sidebarPanel(
-        style = "background: white; border:0; ",
+      sidebarPanel(width = 4,
+        style = "background: white; border:0px; padding:0px; ",
         
         wellPanel(style = "background: white; border-width: thin; border-color: grey;",
           
@@ -37,11 +38,13 @@ ui <- fluidPage(
         
         # Dynamic ui output based on the first selection
         uiOutput("ui")
-        ),
+        )
+        ,
         
         br(),
+        br(),
 
-        wellPanel(style = "background: white; border-width:0; box-shadow:0px; border-top:0px; ",
+        wellPanel(style = "border:0px; padding: 0px; background: white; ",
         tableOutput("table"))
       ),
 
@@ -166,7 +169,7 @@ server <- function(input, output) {
     req(input$title)
     
     MEANING <- rval_text() |>
-      select(text) |>
+      select(meaning) |>
       toString() 
     
     })
@@ -175,7 +178,7 @@ server <- function(input, output) {
     req(input$title)
     
     MEASUREMENT <- rval_text() |>
-      select(text) |>
+      select(measurement) |>
       toString() 
     
   })
@@ -204,9 +207,13 @@ server <- function(input, output) {
         six_month_average = "<b>6-month<br>Average<b>",
         .fn = md) |>
       opt_table_font(font = "Poppins") |>
-      tab_header(title = HTML("<b> <span style='color:green; '>Summary<b>")) |>
-      tab_options(table.font.size = 15) |>
-      opt_align_table_header(align = "left") 
+      tab_header(title = HTML("<b>Summary<b>")) |>
+      tab_options(table.font.size = 12,
+                  table.width = pct(100),
+                  heading.background.color = "#467742",
+                  heading.border.bottom.color = "black",
+                  container.padding.x = px(0)) |>
+      opt_align_table_header(align = "left")
   })
   
   # plot output
@@ -282,7 +289,7 @@ server <- function(input, output) {
         scale_y_continuous(limits = c(0, 25),
                            breaks = seq(0, 25, 5),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Percent of misinformation site links")
+        labs(y = "Percent of links")
       
     } else if (input$title %in% "Discussion about misinformation and foreign interference") {
       
