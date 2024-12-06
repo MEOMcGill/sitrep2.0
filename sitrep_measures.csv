@@ -1222,4 +1222,30 @@ year,month,source,section,number,measure,label,value,shown_value,title,caption,i
 2024,apr,Survey,2,4,division,"",23.8749202792626,23.9%,Division,How do people feel about their own political party versus other parties?,0 Low 100 High
 2024,apr,Survey,2,8,trust_elected_officials,Elected officials,30.725451658446,30.7%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
 2024,apr,Survey,2,8,trust_big_tech,Big Tech,24.4722710394742,24.5%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
-2024,apr,Survey,02,08,trust_journalists,Journalists,55.6852908579181,55.7%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,apr,Survey,2,8,trust_journalists,Journalists,55.6852908579181,55.7%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,nov,Survey,4,1,seeking,"",36.4515183086013,36.5%,News seeking,How many Canadians seek out information about the news?,0 Low 100 High
+2024,nov,Survey,4,2,sharing,"",12.0393098542149,12%,News Sharing,How much do Canadians actively engage in posting and sharing news on social media?,0 Low 100 High
+2024,nov,Survey,4,4,sources,National,42.2774226318708,42.3%,Sources of Weekly News,How many people use each source for weekly news?,0 Low 100 High
+2024,nov,Survey,4,4,sources,International,33.5240490712417,33.5%,Sources of Weekly News,How many people use each source for weekly news?,0 Low 100 High
+2024,nov,Survey,4,4,sources,Local,42.6874857985889,42.7%,Sources of Weekly News,How many people use each source for weekly news?,0 Low 100 High
+2024,nov,Survey,4,5,socmed_news,"",33.9191482934169,33.9%,Social Media for News,How many people use social media weekly for news?,0 Low 100 High
+2024,nov,Survey,2,7,avoidance,"",33.0935792775132,33.1%,News Avoiding,What extent do people avoid the news?,0 Low 100 High
+2024,nov,Survey,2,6,chilled,"",64.6652046408621,64.7%,Chilled speech,What extent do people avoid political discussion and opinion sharing?,0 Low 100 High
+2024,nov,Survey,2,4,division,"",22.7918893716115,22.8%,Division,How do people feel about their own political party versus other parties?,0 Low 100 High
+2024,nov,Survey,2,8,trust_elected_officials,Elected officials,31.0762729082981,31.1%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,nov,Survey,2,8,trust_big_tech,Big Tech,23.7408898973108,23.7%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,nov,Survey,2,8,trust_journalists,Journalists,54.005666976059,54%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,nov,Survey,2,8,trust_news_media,News Media,49.9283788916307,49.9%,Trust by Types of Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,nov,Survey,2,9,trust_gatekeepers,"",39.6878021683247,39.7%,Trust in Information gatekeepers,How much do people trust each type of gatekeeper?,0 Low 100 High
+2024,nov,Survey,3,2,Misinformation_concern,"",45.9509687358828,46%,Concern about misinformation,How concerned are people about misinformation?,0 Low 100 High
+2024,nov,Survey,3,8,AI_concern,"",59.1989789204233,59.2%,Concern about generative AI,How concerned are people about artificial intelligence?,0 Low 100 High
+2024,nov,Survey,3,6,FI_concern_general,"",52.9814819459,53%,Concern about foreign influence,How concerned are people about foreign influence?,0 Low 100 High
+2024,nov,Survey,3,7,FI_concern_china,China,62.7252327949704,62.7%,Concern about foreign influence by country,How concerned are people about the following countries conducting foreign influence?,0 Low 100 High
+2024,nov,Survey,3,7,FI_concern_india,India,39.1839378590936,39.2%,Concern about foreign influence by country,How concerned are people about the following countries conducting foreign influence?,0 Low 100 High
+2024,nov,Survey,3,7,FI_concern_russia,Russia,55.1874808443454,55.2%,Concern about foreign influence by country,How concerned are people about the following countries conducting foreign influence?,0 Low 100 High
+2024,nov,Survey,3,7,FI_concern_uk,UK,7.29465687003334,7.3%,Concern about foreign influence by country,How concerned are people about the following countries conducting foreign influence?,0 Low 100 High
+2024,nov,Survey,3,7,FI_concern_usa,USA,45.0651789354117,45.1%,Concern about foreign influence by country,How concerned are people about the following countries conducting foreign influence?,0 Low 100 High
+2024,nov,Survey,4,3,source_TV,TV,57.9496254905333,57.9%,"Mediums of Weekly News (digital, print, radio and TV)",How many people use each medium weekly for news?,0 Low 100 High
+2024,nov,Survey,4,3,source_Radio,Radio,51.5072429018287,51.5%,"Mediums of Weekly News (digital, print, radio and TV)",How many people use each medium weekly for news?,0 Low 100 High
+2024,nov,Survey,4,3,source_Print,Print,30.1835215874483,30.2%,"Mediums of Weekly News (digital, print, radio and TV)",How many people use each medium weekly for news?,0 Low 100 High
+2024,nov,Survey,04,03,source_Digital,Digital,71.4663844690104,71.5%,"Mediums of Weekly News (digital, print, radio and TV)",How many people use each medium weekly for news?,0 Low 100 High

@@ -1,14 +1,10 @@
+
+
+
 source('global.R')
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-
-    # Application title
-    titlePanel(
-      
-      h2(strong("Characteristics of Ecosystem Health Over Time"), align = "center")),
-  
-  br(),
   br(),
 
   # change visual elements
@@ -18,9 +14,9 @@ ui <- fluidPage(
     sidebarLayout(
       
       sidebarPanel(
-        style = "background-color: #FFFFFF; border: none; ",
+        style = "background: white; border:0; ",
         
-        wellPanel(style = "background-color: white; border-width: thin; border-color: grey;",
+        wellPanel(style = "background: white; border-width: thin; border-color: grey;",
           
         span(textOutput("text1"), style = "font-weight:bold; font-size: 20px;"),
         
@@ -44,9 +40,8 @@ ui <- fluidPage(
         ),
         
         br(),
-        hr(style="border-color: #828282; border-style: double; "),
-        
-        wellPanel(style = "background: white; border-width: thin; border-color: black; ",
+
+        wellPanel(style = "background: white; border-width:0; box-shadow:0px; border-top:0px; ",
         tableOutput("table"))
       ),
 
@@ -58,9 +53,7 @@ ui <- fluidPage(
           
           #plot output
           plotlyOutput("plot"),
-          
-          hr(style="border-color: #828282;"),
-          
+          br(),
         
           span(htmlOutput("text2"), style = "color:#467742; font-size: 16px;"),
           textOutput("MEANING"),
@@ -78,8 +71,8 @@ ui <- fluidPage(
           textOutput("footer"),
           br()
           
-
           )
+      
       )
 )
 
@@ -102,7 +95,7 @@ server <- function(input, output) {
                                                         "Division",
                                                         "News avoidance",
                                                         "Chilled speech",
-                                                        "Trust"),
+                                                        "Trust in information gatekeepers"),
                                             selected = "Inequality"),
            "Threats" = radioButtons("title", h4(strong("Select characteristic:")),
                                    choices = c("Discussion about misinformation and foreign interference",
@@ -212,7 +205,7 @@ server <- function(input, output) {
         .fn = md) |>
       opt_table_font(font = "Poppins") |>
       tab_header(title = HTML("<b> <span style='color:green; '>Summary<b>")) |>
-      tab_options(table.font.size = 12) |>
+      tab_options(table.font.size = 15) |>
       opt_align_table_header(align = "left") 
   })
   
@@ -231,7 +224,8 @@ server <- function(input, output) {
                                                          "Jul-24",
                                                          "Aug-24",
                                                          "Sep-24",
-                                                         "Oct-24")),
+                                                         "Oct-24",
+                                                        "Nov-24")),
              ordered = TRUE) |>
       ggplot(aes(x = month_year, 
                  y = value,
@@ -250,7 +244,8 @@ server <- function(input, output) {
       labs(color = "") +
       theme_minimal(base_family = "poppins", base_size = 12) +
       theme(legend.position = "bottom",
-            axis.title.x = element_blank())
+            axis.title.x = element_blank(),
+            axis.text.x = element_text(angle = 45))
     
     if (input$title %in% "Inequality") {
       plot <- P1 +
@@ -320,7 +315,8 @@ server <- function(input, output) {
                                                    "Jul-24",
                                                    "Aug-24",
                                                    "Sep-24",
-                                                   "Oct-24")),
+                                                   "Oct-24",
+                                                   "Nov-24")),
                ordered = TRUE) |>
         group_by(month_year) |>
         arrange(month_year, desc(value)) |>
@@ -337,15 +333,16 @@ server <- function(input, output) {
                  color = "white",
                  alpha = 0.7) +
         scale_fill_manual(values = color_list) +
-        labs(fill = "") +
+        scale_y_continuous(limits = c(0, 100),
+                           breaks = seq(0, 100, 20),
+                           labels = label_percent(scale = 1)) +
+        labs(fill = "",
+             y = "Percent engagement") +
         theme_minimal(base_family = "poppins", base_size = 12) +
         theme(legend.position = "bottom",
-              axis.title.x = element_blank()) +
-        scale_y_continuous(limits = c(0, 100),
-                     breaks = seq(0, 100, 20),
-                     labels = label_percent(scale = 1)) +
-        labs(y = "Percent engagement")
-      
+              axis.title.x = element_blank(),
+              axis.text.x = element_text(angle = 45))
+       
     } else if (input$title %in% c("Local vs National news engagement", 
                                   "Engagement with Politicians vs News")) {
       
@@ -359,7 +356,8 @@ server <- function(input, output) {
                                                           "Jul-24",
                                                           "Aug-24",
                                                           "Sep-24",
-                                                          "Oct-24")),
+                                                          "Oct-24",
+                                                          "Nov-24")),
                ordered = TRUE) |>
         ggplot(aes(x = month_year,
                    y = value,
@@ -372,14 +370,15 @@ server <- function(input, output) {
                  color = "white",
                  alpha = 0.7) +
         scale_fill_manual(values = color_list) +
-        labs(fill = "") +
-        theme_minimal(base_family = "poppins", base_size = 12) +
-        theme(legend.position = "bottom",
-              axis.title.x = element_blank()) +
         scale_y_continuous(limits = c(0, 100),
                            breaks = seq(0, 100, 20),
                            labels = label_percent(scale = 1)) +
-        labs(y = "Proportion of percent engagement") 
+        labs(fill = "",
+             y = "Proportion of percent engagement") +
+        theme_minimal(base_family = "poppins", base_size = 12) +
+        theme(legend.position = "bottom",
+              axis.title.x = element_blank(),
+              axis.text.x = element_text(angle = 45))
 
     } else {
       plot <- P1 +
@@ -392,12 +391,12 @@ server <- function(input, output) {
     
     ggplotly(plot, 
              tooltip = "text") |>
-      layout(legend = list(orientation = 'h', x = 0.01, y = -0.2, hjust = 0.5),
+      layout(legend = list(orientation = 'h', x = 0.01, y = -0.3, hjust = 0.5),
              annotations = list(x = 1,
-                                y = -0.175,
+                                y = -0.275,
                                 text = ifelse(input$title %in% survey, 
-                                              "Source: Survey data",
-                                              "Source: Social media data"),
+                                              "Data source: Survey",
+                                              "Data source: Social media"),
                                 showarrow = F,
                                 xref = "paper",
                                 yref = "paper",

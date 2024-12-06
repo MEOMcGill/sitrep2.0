@@ -1,71 +1,71 @@
 title,label,current_month,six_month_average
-Inequality,Overall inequality,0.92,0.932
-Segmentation,Segmentation,0.67,0.672
-Toxic speech,Toxicity,0.02,0.028
-Insularity,Conservative,0.06,0.068
-Insularity,Liberal,0.13,0.138
-Insularity,NDP,0.14,0.133
+Inequality,Overall inequality,0.93,0.931
+Segmentation,Segmentation,0.64,0.667
+Toxic speech,Toxicity,0.03,0.029
+Insularity,Conservative,0.06,0.067
+Insularity,Liberal,0.12,0.136
+Insularity,NDP,0.11,0.13
 Inequality,News inequality,0.96,0.957
-News avoidance,News avoidance,29.68,30.879
-Chilled speech,Chilled speech,66.8,64.849
-Division,Division,22.87,22.565
-Trust,Elected officials,31.26,31.015
-Trust,Big Tech,23.6,25.742
-Trust,Journalists,54.31,55.423
-Trust,News Media,48.4,49.778
-Trust,Information gatekeepers,39.39,40.492
-Discussion about misinformation and foreign interference,Misinformation references,0.45,0.35
-Directed foreign influence,China,0.65,0.982
-Directed foreign influence,India,6.55,5.405
-Links to known misinformation websites,Percentage engagement,6.42,12.165
-Directed foreign influence,Russia,0.24,0.31
-Concern about misinformation,Misinformation,50.68,47.361
-Concern about Generative AI,Generative AI,60.86,59.24
-Concern about foreign influence,Overall,55.81,53.048
-Concern about foreign influence,China,62.73,64.356
-Concern about foreign influence,India,44.22,33.093
-Concern about foreign influence,Russia,53.79,53.516
-Concern about foreign influence,UK,5.54,6.567
-Concern about foreign influence,USA,38.27,38.826
-News seeking,News seeking,38.41,37.32
-News sharing,News sharing,10.06,10.548
-Sources of weekly news,National,40.71,40.013
-Sources of weekly news,International,31.37,31.787
-Sources of weekly news,Local,40.36,41.842
-Social media for news,Social media,36.75,36.837
-Mediums of weekly news,TV,55.69,57.566
-Mediums of weekly news,Radio,49.78,51.37
-Mediums of weekly news,Print,29.56,31.262
-Mediums of weekly news,Digital,72.11,73.96
-Top 5 news outlets,CBC,21.64,19.683
-Top 5 news outlets,CTV,30.49,25.563
-Top 5 news outlets,Global News,5.09,6.772
-Platforms used by news outlets,Instagram,5.65,5.84
-Local vs National news engagement,Local,24.6,28.335
-Top 5 news outlets,Narcity,2.44,2.91
-Local vs National news engagement,National,75.4,71.665
-Top 5 news outlets,National Post,1.93,1.73
-Top 5 news outlets,Now Toronto,4.01,3.06
-Top 5 news outlets,Rebel News,2.97,5.523
-Top 5 news outlets,The Post Millennial,4.67,6.863
-Platforms used by news outlets,TikTok,60.52,55.182
-Top 5 news outlets,Toronto Sun,2.24,2.855
-Platforms used by news outlets,X,24.01,25.902
-Platforms used by news outlets,YouTube,9.82,13.08
-Top 5 news outlets,blogTO,3.64,5.034
-Engagement with party leaders,Bloc Québécois,0.22,0.3
-Engagement with elected party members,Bloc Québécois,1.03,0.897
-Engagement with party leaders,Conservative,58.91,62.512
-Engagement with elected party members,Conservative,48.97,43.66
-Engagement with party leaders,Green,0.54,0.24
-Engagement with elected party members,Green,0.88,0.802
-Top social media platforms,Instagram,30.56,36.217
-Engagement with party leaders,Liberal,30.05,25.352
-Engagement with elected party members,Liberal,27.84,27.305
-Engagement with party leaders,NDP,10.28,11.597
-Engagement with elected party members,NDP,21.28,27.34
-Engagement with Politicians vs News,News outlet,53.15,58.232
-Engagement with Politicians vs News,Politician,46.85,41.768
-Top social media platforms,TikTok,8.77,12.35
-Top social media platforms,X,58,48.162
-Top social media platforms,YouTube,2.67,3.27
+News avoidance,News avoidance,33.09,31.124
+Chilled speech,Chilled speech,64.67,64.826
+Division,Division,22.79,22.582
+Trust in information gatekeepers,Elected officials,31.08,31.024
+Trust in information gatekeepers,Big Tech,23.74,25.456
+Trust in information gatekeepers,Journalists,54.01,55.221
+Trust in information gatekeepers,News Media,49.93,49.8
+Trust in information gatekeepers,Information gatekeepers,39.69,40.377
+Discussion about misinformation and foreign interference,Misinformation references,0.31,0.344
+Directed foreign influence,China,0.74,0.947
+Directed foreign influence,India,8.59,5.86
+Links to known misinformation websites,Percentage engagement,10.58,11.939
+Directed foreign influence,Russia,0.43,0.327
+Concern about misinformation,Misinformation,45.95,47.185
+Concern about Generative AI,Generative AI,59.2,59.235
+Concern about foreign influence,Overall,52.98,53.04
+Concern about foreign influence,China,62.73,64.152
+Concern about foreign influence,India,39.18,33.854
+Concern about foreign influence,Russia,55.19,53.725
+Concern about foreign influence,UK,7.29,6.657
+Concern about foreign influence,USA,45.07,39.606
+News seeking,News seeking,36.45,37.196
+News sharing,News sharing,12.04,10.761
+Sources of weekly news,National,42.28,40.337
+Sources of weekly news,International,33.52,32.034
+Sources of weekly news,Local,42.69,41.963
+Social media for news,Social media,33.92,36.42
+Mediums of weekly news,TV,57.95,57.63
+Mediums of weekly news,Radio,51.51,51.393
+Mediums of weekly news,Print,30.18,31.082
+Mediums of weekly news,Digital,71.47,73.545
+Top 5 news outlets,CBC,31.43,21.361
+Top 5 news outlets,CTV,18.45,24.547
+Top 5 news outlets,Global News,5.67,6.614
+Platforms used by news outlets,Instagram,7.9,6.134
+Local vs National news engagement,Local,24.97,27.854
+Top 5 news outlets,Narcity,4.13,3.215
+Local vs National news engagement,National,75.03,72.146
+Top 5 news outlets,National Post,2.1,1.853
+Top 5 news outlets,Rebel News,4.06,5.314
+Top 5 news outlets,The Post Millennial,5.09,6.61
+Platforms used by news outlets,TikTok,56.57,55.38
+Top 5 news outlets,Toronto Sun,3.54,2.953
+Top 5 news outlets,True North,1.9,2.622
+Platforms used by news outlets,X,23.68,25.584
+Platforms used by news outlets,YouTube,11.86,12.906
+Top 5 news outlets,blogTO,7,5.362
+Engagement with party leaders,Bloc Québécois,0.09,0.27
+Engagement with elected party members,Bloc Québécois,1.15,0.933
+Engagement with party leaders,Conservative,59.7,62.11
+Engagement with elected party members,Conservative,49.99,44.564
+Engagement with party leaders,Green,0.07,0.216
+Engagement with elected party members,Green,0.41,0.746
+Top social media platforms,Instagram,39.53,36.69
+Engagement with party leaders,Liberal,34.36,26.639
+Engagement with elected party members,Liberal,22.02,26.55
+Engagement with party leaders,NDP,5.79,10.767
+Engagement with elected party members,NDP,26.43,27.21
+Engagement with Politicians vs News,News outlet,50.15,57.077
+Engagement with Politicians vs News,Politician,49.85,42.923
+Top social media platforms,TikTok,8.63,11.819
+Top social media platforms,X,49.19,48.309
+Top social media platforms,YouTube,2.65,3.181

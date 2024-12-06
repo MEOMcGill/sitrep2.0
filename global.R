@@ -3,7 +3,7 @@
 suppressPackageStartupMessages({
   library(shiny)
   library(rsconnect)
-  library(vroom)
+  library(data.table)
   library(tidyverse)
   library(plotly)
   library(ggtext)
@@ -15,9 +15,9 @@ suppressPackageStartupMessages({
 })
 
 # load data
-df_app <- vroom("df_app.csv")
-df_text <- vroom("df_text.csv", delim = ",")
-df_summary <- vroom("df_summary.csv", delim = ",")
+df_app <- fread("df_app.csv")
+df_text <- readRDS("df_text.rds")
+df_summary <- fread("df_summary.csv")
 
 # variables used in the app
 
@@ -26,7 +26,7 @@ max_rank <- 6
 survey <- c("Division",
             "News avoidance",
             "Chilled speech",
-            "Trust",
+            "Trust in information gatekeepers",
             "Concern about misinformation",
             "Concern about foreign influence",
             "Concern about Generative AI",
@@ -38,9 +38,10 @@ survey <- c("Division",
 
 
 # fonts
-font_add_google("Poppins", "poppins")
-showtext_auto()
-showtext_opts(dpi = 300)
+# already imported from the url
+#font_add_google("Poppins", "poppins")
+#showtext_auto()
+#showtext_opts(dpi = 300)
 
 # theme_set
 theme_set(theme_update(text = element_text(family = "Poppins")))

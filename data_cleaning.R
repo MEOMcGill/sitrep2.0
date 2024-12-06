@@ -4,8 +4,8 @@ suppressPackageStartupMessages({
   library(tidyverse)
 })
  
-# data file from Aengus from November 24   
-df_DT <- read_csv("sitrep_measures_DT_latest.csv")
+# data file from Aengus from December 5   
+df_DT <- read_csv("sitrep_measures_DT.csv")
 
 # data file from Chris from November 25
 df_survey <- read_csv("sitrep_measures.csv") |>
@@ -31,13 +31,13 @@ vulnerability <- c("Inequality",
                    "Toxic speech",
                    "Division",
                    "News avoidance",
-                   "Trust",
+                   "Trust in information gatekeepers",
                    "Chilled speech")
 
 df_vulnerability <- df |>
   mutate(title = case_match(
     title,
-    c("Trust in Information gatekeepers","Trust by Types of Information gatekeepers") ~ "Trust",
+    c("Trust in Information gatekeepers","Trust by Types of Information gatekeepers") ~ "Trust in information gatekeepers",
     "News Avoiding" ~ "News avoidance",
     .default = title)) |>
   mutate(measure = case_match(
@@ -61,7 +61,8 @@ df_vulnerability <- df |>
                                    "Jul-24",
                                    "Aug-24",
                                    "Sep-24",
-                                   "Oct-24")),
+                                   "Oct-24",
+                                   "Nov-24")),
     value = round(value, 2),
     #update labels for the graph
     label = case_match(
@@ -123,7 +124,8 @@ df_threats <- df |>
                                    "Jul-24",
                                    "Aug-24",
                                    "Sep-24",
-                                   "Oct-24")),
+                                   "Oct-24",
+                                   "Nov-24")),
     value = round(value, 2),
     #update labels for the graph
     label = case_match(
@@ -186,7 +188,8 @@ df_news_engagement <- df |>
                                    "Jul-24",
                                    "Aug-24",
                                    "Sep-24",
-                                   "Oct-24")),
+                                   "Oct-24",
+                                   "Nov-24")),
     value = round(value, 2),
     #update labels for the graph
     label = case_match(
@@ -245,7 +248,8 @@ df_news_outlet <- df |>
                                    "Jul-24",
                                    "Aug-24",
                                    "Sep-24",
-                                   "Oct-24")),
+                                   "Oct-24",
+                                   "Nov-24")),
     value = round(value, 2),
     label = case_match(
       measure,
@@ -298,7 +302,8 @@ df_politicians <- df |>
                                    "Jul-24",
                                    "Aug-24",
                                    "Sep-24",
-                                   "Oct-24")),
+                                   "Oct-24",
+                                   "Nov-24")),
     value = round(value, 2),
     label = str_replace(label, "News Outlet", "News outlet"),
     label = case_match(
