@@ -19,6 +19,31 @@ df_app <- fread("df_app.csv")
 df_text <- readRDS("df_text.rds")
 df_summary <- fread("df_summary.csv")
 
+# CSS formating
+shiny_css <- "
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  background-color: white;
+  color: black; 
+  font-family: 'Poppins';
+}
+  sidebar {
+  background-color: white;
+  color: black;
+  }
+  
+  label, input, button, select { 
+  font-family: 'Poppins';
+          color: black; 
+  }
+  
+  div[data-value].active {
+  background-color:#009900 !important;
+  color: white;
+  }"
+
+
 # variables used in the app
 
 max_rank <- 6
@@ -29,7 +54,7 @@ survey <- c("Division",
             "Trust in information gatekeepers",
             "Concern about misinformation",
             "Concern about foreign influence",
-            "Concern about Generative AI",
+            "Concern about generative AI",
             "News seeking",
             "News sharing",
             "Mediums of weekly news",
@@ -133,35 +158,6 @@ color_list <- list(
 )
 
 #=================================================================================
-
-shiny_css <- "
-/* Get a fancy font from Google Fonts */
-  @import url('https://fonts.googleapis.com/css?family=Poppins');
-
-body {
-  background-color: white;
-  color: black; 
-  font-family: 'Poppins';
-}
-  sidebar {
-  background-color: white;
-  color: black;
-  }
-  
-  label, input, button, select { 
-  font-family: 'Poppins';
-          color: black; 
-  }
-  
-  div[data-value].active {
-  background-color:#009900 !important;
-  color: white;
-  }
-  
-"
-
-
-
 
 
 

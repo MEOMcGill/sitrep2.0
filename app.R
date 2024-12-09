@@ -1,6 +1,5 @@
 
 
-
 source('global.R')
 
 # Define UI for application that draws a histogram
@@ -66,12 +65,10 @@ ui <- fluidPage(
           span(htmlOutput("text3"), style = "color:#467742; font-size: 16px;"),
           textOutput("MEASUREMENT"),
           
-          hr(style="border-color: #828282;"),
-          
           br(),
           br(),
           
-          textOutput("footer"),
+          span(textOutput("footer"), style = "color:#467742; font-style: bold; font-size: 12px; text-align: right; ;"),
           br()
           
           )
@@ -106,7 +103,7 @@ server <- function(input, output) {
                                                "Links to known misinformation websites",
                                                "Concern about foreign influence",
                                                "Directed foreign influence",
-                                               "Concern about Generative AI"),
+                                               "Concern about generative AI"),
                                    selected = "Discussion about misinformation and foreign interference"),
            "Engagement with news" = radioButtons("title", h4(strong("Select characteristic:")),
                                     choices = c("News seeking",
@@ -117,15 +114,15 @@ server <- function(input, output) {
                                     selected = "News seeking"),
            "Engagement with news outlets" = radioButtons("title", h4(strong("Select characteristic:")),
                                                  choices = c("Top 5 news outlets",
-                                                             "Local vs National news engagement",
-                                                             "Platforms used by news outlets"),
+                                                             "Local vs national news engagement",
+                                                             "Top social media platforms - news outlets"),
                                                  selected = "Top 5 news outlets"),
            "Engagement with politicians" = radioButtons("title", h4(strong("Select characteristic:")),
-                                                         choices = c("Top social media platforms",
+                                                         choices = c("Top social media platforms - politicians",
                                                                      "Engagement with party leaders",
                                                                      "Engagement with elected party members",
-                                                                     "Engagement with Politicians vs News"),
-                                                         selected = "Top social media platforms")
+                                                                     "Engagement with politicians vs news"),
+                                                         selected = "Top social media platforms - politicians")
            )
   })
   
@@ -255,62 +252,60 @@ server <- function(input, output) {
             axis.text.x = element_text(angle = 45))
     
     if (input$title %in% "Inequality") {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0,1),
-                           breaks = seq(0, 1, 0.2)) +
+      
+      plot <- P1 + scale_y_continuous(limits = c(0,1), 
+                                      breaks = seq(0, 1, 0.2)) +
         labs(y = "Gini coefficient") 
+      
       } else if (input$title %in% "Segmentation") {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0,1),
-                           breaks = seq(0, 1, 0.2)) +
+        
+      plot <- P1 + scale_y_continuous(limits = c(0,1),
+                                      breaks = seq(0, 1, 0.2)) +
         labs(y = "Segmentation index")
       
       } else if (input$title %in% "Insularity") {
-      plot <- P1 + 
-        scale_y_continuous(limits = c(0,0.25),
-                           breaks = seq(0, 0.25, 0.05)) +
+        
+      plot <- P1 + scale_y_continuous(limits = c(0,0.25),
+                                      breaks = seq(0, 0.25, 0.05)) +
         labs(y = "Insularity index")
       
     } else if (input$title %in% "Toxic speech") {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0, 0.1),
-                           breaks = seq(0, 0.1, 0.05)) +
+      plot <- P1 + scale_y_continuous(limits = c(0, 0.1),
+                                      breaks = seq(0, 0.1, 0.05)) +
         labs(y = "Toxocity index")
       
     } else if (input$title %in% "Directed foreign influence") {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0, 10),
-                           breaks = seq(0, 10, 2),
-                           labels = label_percent(scale = 1)) +
+      
+      plot <- P1 + scale_y_continuous(limits = c(0, 10),
+                                      breaks = seq(0, 10, 2),
+                                      labels = label_percent(scale = 1)) +
         labs(y = "Percent connections")
       
     } else if (input$title %in% "Links to known misinformation websites") {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0, 25),
-                           breaks = seq(0, 25, 5),
-                           labels = label_percent(scale = 1)) +
+      
+      plot <- P1 + scale_y_continuous(limits = c(0, 25),
+                                      breaks = seq(0, 25, 5),
+                                      labels = label_percent(scale = 1)) +
         labs(y = "Percent of links")
       
     } else if (input$title %in% "Discussion about misinformation and foreign interference") {
       
-      plot <- P1 +
-        scale_y_continuous(limits = c(0, 1),
-                           breaks = seq(0, 1, 0.5),
-                           labels = label_percent(scale = 1)) +
+      plot <- P1 + scale_y_continuous(limits = c(0, 1),
+                                      breaks = seq(0, 1, 0.5),
+                                      labels = label_percent(scale = 1)) +
         labs(y = "Percent references")  
       
     } else if (input$title %in% c("Engagement with party leaders",
                                  "Engagement with elected party members",
-                                 "Platforms used by news outlets", 
-                                 "Top social media platforms")) {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0, 100),
-                           breaks = seq(0, 100, 20),
-                           labels = label_percent(scale = 1)) +
+                                 "Top social media platforms - news outlets", 
+                                 "Top social media platforms - politicians")) {
+      
+      plot <- P1 + scale_y_continuous(limits = c(0, 100),
+                                      breaks = seq(0, 100, 20),
+                                      labels = label_percent(scale = 1)) +
         labs(y = "Percent engagement")  
       
-            
-    } else if (input$title %in% "Top 5 news outlets") {
+      } else if (input$title %in% "Top 5 news outlets") {
       
       plot <- rval_data() |>
         mutate(month_year = factor(month_year,levels = c("Jan-24",
@@ -350,8 +345,8 @@ server <- function(input, output) {
               axis.title.x = element_blank(),
               axis.text.x = element_text(angle = 45))
        
-    } else if (input$title %in% c("Local vs National news engagement", 
-                                  "Engagement with Politicians vs News")) {
+    } else if (input$title %in% c("Local vs national news engagement", 
+                                  "Engagement with politicians vs news")) {
       
       plot <- rval_data() |>
         mutate(month_year =  factor(month_year,levels = c("Jan-24",
@@ -388,16 +383,13 @@ server <- function(input, output) {
               axis.text.x = element_text(angle = 45))
 
     } else {
-      plot <- P1 +
-        scale_y_continuous(limits = c(0, 100),
-                           breaks = seq(0, 100, 20),
-                           labels = label_percent(scale = 1)) +
+      plot <- P1 + scale_y_continuous(limits = c(0, 100),
+                                      breaks = seq(0, 100, 20),
+                                      labels = label_percent(scale = 1)) +
         labs(y = "Percent of survey responders") 
-      
     } 
     
-    ggplotly(plot, 
-             tooltip = "text") |>
+    ggplotly(plot, tooltip = "text") |>
       layout(legend = list(orientation = 'h', x = 0.01, y = -0.3, hjust = 0.5),
              annotations = list(x = 1,
                                 y = -0.275,
@@ -413,8 +405,7 @@ server <- function(input, output) {
   }) 
   
   output$footer <- renderText({
-    style = "color:#467742; font-style: bold; font-size: 15px; align: center;"
-    "© Canadian Digital Media Research Network 2024"
+    footer <- "© Canadian Digital Media Research Network 2024"
   })
   
 } 

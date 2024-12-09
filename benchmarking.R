@@ -63,7 +63,7 @@ profvis({
   })
   
   df_app <- fread("df_app.csv")
-  df_text <- fread("df_text.csv")
+  df_text <- readRDS("df_text.rds")
   df_summary <- fread("df_summary.csv")
   
   max_rank <- 6
