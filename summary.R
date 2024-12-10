@@ -1,7 +1,6 @@
 # summary data
 
 library(tidyverse)
-library(glue)
 
 this_month <- "Nov-24"
 

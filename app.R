@@ -50,7 +50,7 @@ ui <- fluidPage(
         # Show a plot of the generated distribution
         mainPanel(
           # add a text output
-          span(textOutput("TITLE"), style = "color:#467742; font-style: bold; font-size: 25px;"),
+          span(textOutput("TITLE"), style = "color:#467742; font-style: bold; font-size: 28px;"),
           span(textOutput("subtitle"), style = "color:FAF9F6; font-style: italic; font-size: 18px;"),
           
           #plot output
@@ -185,11 +185,11 @@ server <- function(input, output) {
   })
   
   output[["text2"]] <- renderText({
-    text2 <- HTML("MEANING<br>What does this data tell us?")
+    text2 <- HTML("<font size='5px'>MEANING</font><br>What does this data tell us?")
   })
   
   output[["text3"]] <- renderText({
-    text3 <- HTML("MEASUREMENT<br>How do we generate these measures?")
+    text3 <- HTML("<font size='5px'>MEASUREMENT</font><br>How do we generate these measures?")
   })
   
   output[["table"]] <- render_gt({

@@ -12,11 +12,15 @@ df_survey <- read_csv("sitrep_measures.csv") |>
   filter(source == "Survey") |>
   mutate(section = as.numeric(section),
          number = as.numeric(number)) |>
+  # remove duplicate cells
   filter(measure != "trust") |>
   filter(!(measure == "trust_gatekeepers" &
              value %in% c(41.25117676,40.81673482))) |>
   filter(!(measure == "Misinformation_concern" &
              title == "Concern about generative AI")) |>
+  # remove the news avoidance April data because the question changed in May
+  filter(!(measure == "avoidance" &
+             month == "apr")) |>
   distinct()
   
   

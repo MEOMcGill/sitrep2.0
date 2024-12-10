@@ -92,6 +92,11 @@ meo_colors <- c("#467742",
                 "#6BADC6",
                 "#F2E96B")
 
+social_media <- c("#c32aa3",
+                  "#69c9d0",
+                  "#1da1f2",
+                  "#ff0000")
+
 color_list <- list(
   #vulnerability
   "Conservative" = party_colors[[2]],
@@ -140,10 +145,10 @@ color_list <- list(
   "Global News" = meo_colors[[8]],
   "Now Toronto" = meo_colors[[5]], 
   "Narcity" = meo_colors[[5]],
-  "Instagram" = party_colors[[4]],
-  "TikTok" = meo_colors[[7]],
-  "X" = meo_colors[[1]],
-  "YouTube" = meo_colors[[8]],
+  "Instagram" = social_media[[1]],
+  "TikTok" = social_media[[2]],
+  "X" = social_media[[3]],
+  "YouTube" = social_media[[4]],
   "Digital" = party_colors[[4]],
   "Print" = meo_colors[[7]],
   "Radio" = meo_colors[[1]],

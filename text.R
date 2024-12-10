@@ -3,7 +3,7 @@
 library(tidyverse)
 
 
-df_text <- fread("text_updated.csv", encoding = "Latin-1") |>
+df_text <- fread("text_updated.csv") |>
   drop_na() |>
   mutate(title_upper = str_to_upper(title))
 
