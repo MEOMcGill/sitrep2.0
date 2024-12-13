@@ -2,79 +2,79 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Apr,Digital,overall_inequality,Overall inequality,0.92,Inequality,24,Apr-24
 2024,Apr,Digital,segmentation,Segmentation,0.67,Segmentation,24,Apr-24
 2024,Apr,Digital,toxicity,Toxicity,0.02834,Toxic speech,24,Apr-24
-2024,Apr,Digital,insularity_cpc,Conservative,0.07,Insularity,24,Apr-24
-2024,Apr,Digital,insularity_lpc,Liberal,0.17,Insularity,24,Apr-24
-2024,Apr,Digital,insularity_ndp,NDP,0.13,Insularity,24,Apr-24
+2024,Apr,Digital,insularity_cpc,Conservative,0.072,Insularity,24,Apr-24
+2024,Apr,Digital,insularity_lpc,Liberal,0.1703,Insularity,24,Apr-24
+2024,Apr,Digital,insularity_ndp,NDP,0.133,Insularity,24,Apr-24
 2024,Apr,Digital,news_inequality,News inequality,0.95,Inequality,24,Apr-24
 2024,Aug,Digital,overall_inequality,Overall inequality,0.94,Inequality,24,Aug-24
 2024,Aug,Digital,segmentation,Segmentation,0.72,Segmentation,24,Aug-24
 2024,Aug,Digital,toxicity,Toxicity,0.02521,Toxic speech,24,Aug-24
-2024,Aug,Digital,insularity_cpc,Conservative,0.07,Insularity,24,Aug-24
-2024,Aug,Digital,insularity_lpc,Liberal,0.13,Insularity,24,Aug-24
-2024,Aug,Digital,insularity_ndp,NDP,0.13,Insularity,24,Aug-24
+2024,Aug,Digital,insularity_cpc,Conservative,0.0672,Insularity,24,Aug-24
+2024,Aug,Digital,insularity_lpc,Liberal,0.1262,Insularity,24,Aug-24
+2024,Aug,Digital,insularity_ndp,NDP,0.1308,Insularity,24,Aug-24
 2024,Aug,Digital,news_inequality,News inequality,0.95,Inequality,24,Aug-24
 2024,Feb,Digital,overall_inequality,Overall inequality,0.91,Inequality,24,Feb-24
 2024,Feb,Digital,segmentation,Segmentation,0.67,Segmentation,24,Feb-24
 2024,Feb,Digital,toxicity,Toxicity,0.03198,Toxic speech,24,Feb-24
-2024,Feb,Digital,insularity_cpc,Conservative,0.06,Insularity,24,Feb-24
-2024,Feb,Digital,insularity_lpc,Liberal,0.14,Insularity,24,Feb-24
-2024,Feb,Digital,insularity_ndp,NDP,0.13,Insularity,24,Feb-24
+2024,Feb,Digital,insularity_cpc,Conservative,0.0632,Insularity,24,Feb-24
+2024,Feb,Digital,insularity_lpc,Liberal,0.1446,Insularity,24,Feb-24
+2024,Feb,Digital,insularity_ndp,NDP,0.1271,Insularity,24,Feb-24
 2024,Feb,Digital,news_inequality,News inequality,0.95,Inequality,24,Feb-24
 2024,Jan,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,Jan-24
 2024,Jan,Digital,segmentation,Segmentation,0.69,Segmentation,24,Jan-24
 2024,Jan,Digital,toxicity,Toxicity,0.02824,Toxic speech,24,Jan-24
-2024,Jan,Digital,insularity_cpc,Conservative,0.07,Insularity,24,Jan-24
-2024,Jan,Digital,insularity_lpc,Liberal,0.15,Insularity,24,Jan-24
-2024,Jan,Digital,insularity_ndp,NDP,0.13,Insularity,24,Jan-24
+2024,Jan,Digital,insularity_cpc,Conservative,0.0659,Insularity,24,Jan-24
+2024,Jan,Digital,insularity_lpc,Liberal,0.15310000000000001,Insularity,24,Jan-24
+2024,Jan,Digital,insularity_ndp,NDP,0.135,Insularity,24,Jan-24
 2024,Jan,Digital,news_inequality,News inequality,0.96,Inequality,24,Jan-24
 2024,Jul,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,Jul-24
 2024,Jul,Digital,segmentation,Segmentation,0.59,Segmentation,24,Jul-24
 2024,Jul,Digital,toxicity,Toxicity,0.02993,Toxic speech,24,Jul-24
-2024,Jul,Digital,insularity_cpc,Conservative,0.07,Insularity,24,Jul-24
-2024,Jul,Digital,insularity_lpc,Liberal,0.15,Insularity,24,Jul-24
-2024,Jul,Digital,insularity_ndp,NDP,0.11,Insularity,24,Jul-24
+2024,Jul,Digital,insularity_cpc,Conservative,0.071,Insularity,24,Jul-24
+2024,Jul,Digital,insularity_lpc,Liberal,0.1511,Insularity,24,Jul-24
+2024,Jul,Digital,insularity_ndp,NDP,0.1132,Insularity,24,Jul-24
 2024,Jul,Digital,news_inequality,News inequality,0.95,Inequality,24,Jul-24
 2024,Jun,Digital,overall_inequality,Overall inequality,0.94,Inequality,24,Jun-24
 2024,Jun,Digital,segmentation,Segmentation,0.67,Segmentation,24,Jun-24
 2024,Jun,Digital,toxicity,Toxicity,0.02787,Toxic speech,24,Jun-24
-2024,Jun,Digital,insularity_cpc,Conservative,0.07,Insularity,24,Jun-24
-2024,Jun,Digital,insularity_lpc,Liberal,0.14,Insularity,24,Jun-24
-2024,Jun,Digital,insularity_ndp,NDP,0.14,Insularity,24,Jun-24
+2024,Jun,Digital,insularity_cpc,Conservative,0.0715,Insularity,24,Jun-24
+2024,Jun,Digital,insularity_lpc,Liberal,0.1401,Insularity,24,Jun-24
+2024,Jun,Digital,insularity_ndp,NDP,0.1408,Insularity,24,Jun-24
 2024,Jun,Digital,news_inequality,News inequality,0.96,Inequality,24,Jun-24
 2024,Mar,Digital,overall_inequality,Overall inequality,0.92,Inequality,24,Mar-24
 2024,Mar,Digital,segmentation,Segmentation,0.65,Segmentation,24,Mar-24
 2024,Mar,Digital,toxicity,Toxicity,0.02904,Toxic speech,24,Mar-24
-2024,Mar,Digital,insularity_cpc,Conservative,0.06,Insularity,24,Mar-24
-2024,Mar,Digital,insularity_lpc,Liberal,0.14,Insularity,24,Mar-24
-2024,Mar,Digital,insularity_ndp,NDP,0.11,Insularity,24,Mar-24
+2024,Mar,Digital,insularity_cpc,Conservative,0.065,Insularity,24,Mar-24
+2024,Mar,Digital,insularity_lpc,Liberal,0.1364,Insularity,24,Mar-24
+2024,Mar,Digital,insularity_ndp,NDP,0.1132,Insularity,24,Mar-24
 2024,Mar,Digital,news_inequality,News inequality,0.95,Inequality,24,Mar-24
 2024,May,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,May-24
 2024,May,Digital,segmentation,Segmentation,0.67,Segmentation,24,May-24
 2024,May,Digital,toxicity,Toxicity,0.02878,Toxic speech,24,May-24
-2024,May,Digital,insularity_cpc,Conservative,0.07,Insularity,24,May-24
-2024,May,Digital,insularity_lpc,Liberal,0.14,Insularity,24,May-24
-2024,May,Digital,insularity_ndp,NDP,0.14,Insularity,24,May-24
+2024,May,Digital,insularity_cpc,Conservative,0.0731,Insularity,24,May-24
+2024,May,Digital,insularity_lpc,Liberal,0.1413,Insularity,24,May-24
+2024,May,Digital,insularity_ndp,NDP,0.1377,Insularity,24,May-24
 2024,May,Digital,news_inequality,News inequality,0.96,Inequality,24,May-24
 2024,Nov,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,Nov-24
 2024,Nov,Digital,segmentation,Segmentation,0.64,Segmentation,24,Nov-24
 2024,Nov,Digital,toxicity,Toxicity,0.02665,Toxic speech,24,Nov-24
-2024,Nov,Digital,insularity_cpc,Conservative,0.06,Insularity,24,Nov-24
-2024,Nov,Digital,insularity_lpc,Liberal,0.12,Insularity,24,Nov-24
-2024,Nov,Digital,insularity_ndp,NDP,0.11,Insularity,24,Nov-24
+2024,Nov,Digital,insularity_cpc,Conservative,0.0561,Insularity,24,Nov-24
+2024,Nov,Digital,insularity_lpc,Liberal,0.124,Insularity,24,Nov-24
+2024,Nov,Digital,insularity_ndp,NDP,0.111,Insularity,24,Nov-24
 2024,Nov,Digital,news_inequality,News inequality,0.96,Inequality,24,Nov-24
 2024,Oct,Digital,overall_inequality,Overall inequality,0.92,Inequality,24,Oct-24
 2024,Oct,Digital,segmentation,Segmentation,0.67,Segmentation,24,Oct-24
 2024,Oct,Digital,toxicity,Toxicity,0.02492,Toxic speech,24,Oct-24
-2024,Oct,Digital,insularity_cpc,Conservative,0.06,Insularity,24,Oct-24
-2024,Oct,Digital,insularity_lpc,Liberal,0.13,Insularity,24,Oct-24
-2024,Oct,Digital,insularity_ndp,NDP,0.14,Insularity,24,Oct-24
+2024,Oct,Digital,insularity_cpc,Conservative,0.0589,Insularity,24,Oct-24
+2024,Oct,Digital,insularity_lpc,Liberal,0.1258,Insularity,24,Oct-24
+2024,Oct,Digital,insularity_ndp,NDP,0.141,Insularity,24,Oct-24
 2024,Oct,Digital,news_inequality,News inequality,0.96,Inequality,24,Oct-24
 2024,Sep,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,Sep-24
 2024,Sep,Digital,segmentation,Segmentation,0.71,Segmentation,24,Sep-24
 2024,Sep,Digital,toxicity,Toxicity,0.02507,Toxic speech,24,Sep-24
-2024,Sep,Digital,insularity_cpc,Conservative,0.07,Insularity,24,Sep-24
-2024,Sep,Digital,insularity_lpc,Liberal,0.14,Insularity,24,Sep-24
-2024,Sep,Digital,insularity_ndp,NDP,0.14,Insularity,24,Sep-24
+2024,Sep,Digital,insularity_cpc,Conservative,0.0663,Insularity,24,Sep-24
+2024,Sep,Digital,insularity_lpc,Liberal,0.1404,Insularity,24,Sep-24
+2024,Sep,Digital,insularity_ndp,NDP,0.1442,Insularity,24,Sep-24
 2024,Sep,Digital,news_inequality,News inequality,0.96,Inequality,24,Sep-24
 2024,Aug,Survey,avoidance,News avoidance,30.04,News avoidance,24,Aug-24
 2024,Aug,Survey,chilled,Chilled speech,64.44,Chilled speech,24,Aug-24

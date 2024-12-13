@@ -88,15 +88,15 @@ server <- function(input, output) {
     # UI component and send it to the client.
     switch(input$category,
            "Vulnerabilities" = radioButtons("title", h4(strong("Select characteristic:")),
-                                            choices = c("Inequality",
-                                                        "Segmentation",
-                                                        "Insularity",
-                                                        "Toxic speech",
+                                            choices = c("Chilled speech",
                                                         "Division",
+                                                        "Inequality",
+                                                        "Insularity",
                                                         "News avoidance",
-                                                        "Chilled speech",
+                                                        "Segmentation",
+                                                        "Toxic speech",
                                                         "Trust in information gatekeepers"),
-                                            selected = "Inequality"),
+                                            selected = "Chilled speech"),
            "Threats" = radioButtons("title", h4(strong("Select characteristic:")),
                                    choices = c("Discussion about misinformation and foreign interference",
                                                "Concern about misinformation",
@@ -214,6 +214,7 @@ server <- function(input, output) {
   })
   
   # plot output
+  
   output[["plot"]] <- renderPlotly({
     req(input$title)
     

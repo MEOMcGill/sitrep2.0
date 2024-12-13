@@ -67,7 +67,8 @@ df_vulnerability <- df |>
                                    "Sep-24",
                                    "Oct-24",
                                    "Nov-24")),
-    value = ifelse(title == "Toxic speech", round(value,5), round(value,2)),
+    value = ifelse(title == "Toxic speech", round(value,5), 
+                   ifelse(title == "Insularity", round(value, 4),round(value,2))),
     #update labels for the graph
     label = case_match(
       measure,
