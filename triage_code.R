@@ -1,11 +1,5 @@
 
-# Define UI for application that draws a histogram
 ui <- fluidPage(
-  
-  # Application title
-  titlePanel(h2("Characteristics of Ecosystem Health Over Time", align = "center")),
-  
-  br(),
   br(),
   
   # change visual elements
@@ -13,78 +7,27 @@ ui <- fluidPage(
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
-    sidebarPanel(
-      
-      # sidebar panel style
-      style = "background-color: white; ",
-      
-      # Dropdown 1
-      selectInput(
-        inputId = "title",
-        label = h4("VULNERABILITIES"),
-        choices = c("Inequality",
-                    "Segmentation",
-                    "Insularity",
-                    "Toxic speech",
-                    "Division",
-                    "News Avoidance",
-                    "Trust",
-                    "Chilled speech"),
-        selected = "Inequality"
-      ),
-      
-      # add space
-      br(),
-      
-      # Dropdown 2
-      selectInput(
-        inputId = "title",
-        label = h4("THREATS"),
-        choices = c("Misinformation",
-                    "Foreign Influence",
-                    "Artificial Intelligence"),
-        selected = FALSE
-      ),
-      
-      #add space
-      br(),
-      
-      # Dropdown 3
-      selectInput(
-        inputId = "title",
-        label = h4("ENGAGEMENT WITH NEWS"),
-        choices = c("News seeking",
-                    "News sharing",
-                    "News consumption"),
-        selected = FALSE
-      ),
-      
-      # add space
-      br(),
-      
-      # Dropdown 4
-      selectInput(
-        inputId = "title",
-        label = h4("ENGAGEMENT WITH NEWS OUTLETS"),
-        choices = c("Top 5 outlets",
-                    "Local vs National outlets",
-                    "Platforms"),
-        selected = FALSE
-      ),
-      
-      # add space
-      br(),
-      
-      # Dropdown 5
-      selectInput(
-        inputId = "title",
-        label = h4("ENGAGEMENT WITH POLITICIANS"),
-        choices = c("Engagement with political leaders",
-                    "Top social media platforms",
-                    "Politicians vs news engagement"),
-        selected = FALSE
-      )
+    
+    sidebarPanel(width = 4,
+                 style = "background: white; border:0; ",
+                 span(textOutput("text1"), style = "font-weight:bold; font-size: 20px;"),
+                 br(),
+                 selectInput(inputId = "category",
+                             label = h4(strong("Select category:")),
+                             choices = c("Vulnerabilities",
+                                         "Threats",
+                                         "Engagement with news",
+                                         "Engagement with news outlets",
+                                         "Engagement with politicians"),
+                             selected = "Vulnerabilities"),
+                 uiOutput("ui"),
+                 
+                 br(),
+                 
+                 wellPanel(style = "background: white; border-width:0; box-shadow:0px; border-top:0px; ",
+                           tableOutput("table"))
     ),
+    
     # Show a plot of the generated distribution
     mainPanel(
       # add a text output
@@ -93,17 +36,34 @@ ui <- fluidPage(
       
       #plot output
       plotlyOutput("plot"),
+      br(),
       
-      hr(),
+      span(htmlOutput("text2"), style = "color:#467742; font-size: 16px;"),
+      textOutput("MEANING"),
       
-      textOutput("text1"),
+      hr(style="border-color: #828282;"),
       
-      hr(),
+      span(htmlOutput("text3"), style = "color:#467742; font-size: 16px;"),
+      textOutput("MEASUREMENT"),
       
-      textOutput("text2"),
+      hr(style="border-color: #828282;"),
       
-      hr()
+      br(),
+      br(),
+      
+      textOutput("footer"),
+      br()
       
     )
+    
   )
 )
+
+
+server <- function(input, output, session) {
+  
+}
+
+shinyApp(ui, server)
+
+
