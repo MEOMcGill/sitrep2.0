@@ -230,7 +230,8 @@ server <- function(input, output) {
                                                          "Aug-24",
                                                          "Sep-24",
                                                          "Oct-24",
-                                                        "Nov-24")),
+                                                        "Nov-24",
+                                                        "Dec-24")),
              ordered = TRUE) |>
       ggplot(aes(x = month_year, 
                  y = value,
@@ -319,7 +320,8 @@ server <- function(input, output) {
                                                    "Aug-24",
                                                    "Sep-24",
                                                    "Oct-24",
-                                                   "Nov-24")),
+                                                   "Nov-24",
+                                                   "Dec-24")),
                ordered = TRUE) |>
         group_by(month_year) |>
         arrange(month_year, desc(value)) |>
@@ -360,7 +362,8 @@ server <- function(input, output) {
                                                           "Aug-24",
                                                           "Sep-24",
                                                           "Oct-24",
-                                                          "Nov-24")),
+                                                          "Nov-24",
+                                                          "Dec-24")),
                ordered = TRUE) |>
         ggplot(aes(x = month_year,
                    y = value,

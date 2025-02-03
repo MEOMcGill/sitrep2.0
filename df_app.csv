@@ -76,6 +76,12 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,insularity_lpc,Liberal,0.1404,Insularity,24,Sep-24
 2024,Sep,Digital,insularity_ndp,NDP,0.1442,Insularity,24,Sep-24
 2024,Sep,Digital,news_inequality,News inequality,0.96,Inequality,24,Sep-24
+2024,Dec,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,Dec-24
+2024,Dec,Digital,segmentation,Segmentation,0.7,Segmentation,24,Dec-24
+2024,Dec,Digital,insularity_cpc,Conservative,0.0567,Insularity,24,Dec-24
+2024,Dec,Digital,insularity_lpc,Liberal,0.1259,Insularity,24,Dec-24
+2024,Dec,Digital,insularity_ndp,NDP,0.1111,Insularity,24,Dec-24
+2024,Dec,Digital,news_inequality,News inequality,0.97,Inequality,24,Dec-24
 2024,Aug,Survey,avoidance,News avoidance,30.04,News avoidance,24,Aug-24
 2024,Aug,Survey,chilled,Chilled speech,64.44,Chilled speech,24,Aug-24
 2024,Aug,Survey,division,Division,22.24,Division,24,Aug-24
@@ -137,6 +143,14 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Nov,Survey,trust_journalists,Journalists,54.01,Trust in information gatekeepers,24,Nov-24
 2024,Nov,Survey,trust_news_media,News Media,49.93,Trust in information gatekeepers,24,Nov-24
 2024,Nov,Survey,trust_gatekeepers,Information gatekeepers,39.69,Trust in information gatekeepers,24,Nov-24
+2024,Dec,Survey,avoidance,News avoidance,28.98,News avoidance,24,Dec-24
+2024,Dec,Survey,chilled,Chilled speech,63.09,Chilled speech,24,Dec-24
+2024,Dec,Survey,division,Division,23.08,Division,24,Dec-24
+2024,Dec,Survey,trust_elected_officials,Elected officials,34.42,Trust in information gatekeepers,24,Dec-24
+2024,Dec,Survey,trust_big_tech,Big Tech,30,Trust in information gatekeepers,24,Dec-24
+2024,Dec,Survey,trust_journalists,Journalists,59,Trust in information gatekeepers,24,Dec-24
+2024,Dec,Survey,trust_news_media,News Media,54.81,Trust in information gatekeepers,24,Dec-24
+2024,Dec,Survey,trust_gatekeepers,Information gatekeepers,44.56,Trust in information gatekeepers,24,Dec-24
 2024,Apr,Digital,misinfo_references,Misinformation references,0.38,Discussion about misinformation and foreign interference,24,Apr-24
 2024,Apr,Digital,from_china,China,0.9,Directed foreign influence,24,Apr-24
 2024,Apr,Digital,from_india,India,3.79,Directed foreign influence,24,Apr-24
@@ -192,6 +206,11 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,from_india,India,6.06,Directed foreign influence,24,Sep-24
 2024,Sep,Digital,misinfo_link_engagement,Percentage engagement,9.6,Links to known misinformation websites,24,Sep-24
 2024,Sep,Digital,from_russia,Russia,0.32,Directed foreign influence,24,Sep-24
+2024,Dec,Digital,misinfo_references,Misinformation references,0.21,Discussion about misinformation and foreign interference,24,Dec-24
+2024,Dec,Digital,from_china,China,0.95,Directed foreign influence,24,Dec-24
+2024,Dec,Digital,from_india,India,7.63,Directed foreign influence,24,Dec-24
+2024,Dec,Digital,misinfo_link_engagement,Percentage engagement,6.16,Links to known misinformation websites,24,Dec-24
+2024,Dec,Digital,from_russia,Russia,0.47,Directed foreign influence,24,Dec-24
 2024,Aug,Survey,AI_concern,Generative AI,58.37,Concern about generative AI,24,Aug-24
 2024,Aug,Survey,FI_concern_general,Overall,53.73,Concern about foreign influence,24,Aug-24
 2024,Aug,Survey,Misinformation_concern,Misinformation,47.85,Concern about misinformation,24,Aug-24
@@ -257,9 +276,16 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Nov,Survey,FI_concern_russia,Russia,55.19,Concern about foreign influence,24,Nov-24
 2024,Nov,Survey,FI_concern_uk,UK,7.29,Concern about foreign influence,24,Nov-24
 2024,Nov,Survey,FI_concern_usa,USA,45.07,Concern about foreign influence,24,Nov-24
+2024,Dec,Survey,Misinformation_concern,Misinformation,49.98,Concern about misinformation,24,Dec-24
+2024,Dec,Survey,AI_concern,Generative AI,62.64,Concern about generative AI,24,Dec-24
+2024,Dec,Survey,FI_concern_general,Overall,55.26,Concern about foreign influence,24,Dec-24
+2024,Dec,Survey,FI_concern_china,China,47.89,Concern about foreign influence,24,Dec-24
+2024,Dec,Survey,FI_concern_india,India,32.1,Concern about foreign influence,24,Dec-24
+2024,Dec,Survey,FI_concern_russia,Russia,41.24,Concern about foreign influence,24,Dec-24
+2024,Dec,Survey,FI_concern_uk,UK,3.41,Concern about foreign influence,24,Dec-24
+2024,Dec,Survey,FI_concern_usa,USA,39.52,Concern about foreign influence,24,Dec-24
 2024,Aug,Survey,socmed_news,Social media,36.78,Social media for news,24,Aug-24
 2024,Aug,Survey,sharing,News sharing,10.22,News sharing,24,Aug-24
-2024,Aug,Survey,seeking,News seeking,38.93,News seeking,24,Aug-24
 2024,Aug,Survey,source_Digital,Digital,73.63,Mediums of weekly news,24,Aug-24
 2024,Aug,Survey,sources,International,33.85,Sources of weekly news,24,Aug-24
 2024,Aug,Survey,sources,Local,41.95,Sources of weekly news,24,Aug-24
@@ -273,10 +299,11 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Jul,Survey,mediums,TV,58.23,Mediums of weekly news,24,Jul-24
 2024,Jul,Survey,socmed_news,Social media,35.79,Social media for news,24,Jul-24
 2024,Jul,Survey,sharing,News sharing,10.75,News sharing,24,Jul-24
-2024,Jul,Survey,seeking,News seeking,37.14,News seeking,24,Jul-24
 2024,Jul,Survey,sources,International,34.14,Sources of weekly news,24,Jul-24
 2024,Jul,Survey,sources,Local,40.52,Sources of weekly news,24,Jul-24
 2024,Jul,Survey,sources,National,40.75,Sources of weekly news,24,Jul-24
+2024,Aug,Survey,seeking,News seeking,38.93,News seeking,24,Aug-24
+2024,Jul,Survey,seeking,News seeking,37.14,News seeking,24,Jul-24
 2024,Jul,Survey,source_TV,TV,58.23,Mediums of weekly news,24,Jul-24
 2024,Jul,Survey,source_Radio,Radio,51.02,Mediums of weekly news,24,Jul-24
 2024,Jul,Survey,source_Print,Print,32.11,Mediums of weekly news,24,Jul-24
@@ -313,7 +340,6 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Survey,source_Radio,Radio,51.11,Mediums of weekly news,24,Sep-24
 2024,Sep,Survey,source_Print,Print,31.17,Mediums of weekly news,24,Sep-24
 2024,Sep,Survey,source_Digital,Digital,72.34,Mediums of weekly news,24,Sep-24
-2024,Apr,Survey,seeking,News seeking,5.94,News seeking,24,Apr-24
 2024,Apr,Survey,sharing,News sharing,5.25,News sharing,24,Apr-24
 2024,Apr,Survey,sources,National,36.8,Sources of weekly news,24,Apr-24
 2024,Apr,Survey,sources,International,29.11,Sources of weekly news,24,Apr-24
@@ -329,6 +355,16 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Nov,Survey,source_Radio,Radio,51.51,Mediums of weekly news,24,Nov-24
 2024,Nov,Survey,source_Print,Print,30.18,Mediums of weekly news,24,Nov-24
 2024,Nov,Survey,source_Digital,Digital,71.47,Mediums of weekly news,24,Nov-24
+2024,Dec,Survey,seeking,News seeking,40.26,News seeking,24,Dec-24
+2024,Dec,Survey,sharing,News sharing,12.06,News sharing,24,Dec-24
+2024,Dec,Survey,sources,National,45.06,Sources of weekly news,24,Dec-24
+2024,Dec,Survey,sources,International,35.51,Sources of weekly news,24,Dec-24
+2024,Dec,Survey,sources,Local,44.27,Sources of weekly news,24,Dec-24
+2024,Dec,Survey,socmed_news,Social media,37.08,Social media for news,24,Dec-24
+2024,Dec,Survey,source_TV,TV,57.8,Mediums of weekly news,24,Dec-24
+2024,Dec,Survey,source_Radio,Radio,51.35,Mediums of weekly news,24,Dec-24
+2024,Dec,Survey,source_Print,Print,30.62,Mediums of weekly news,24,Dec-24
+2024,Dec,Survey,source_Digital,Digital,72.31,Mediums of weekly news,24,Dec-24
 2024,Apr,Digital,top_outlet_breakfast television,Breakfast Television,2.86,Top 5 news outlets,24,Apr-24
 2024,Apr,Digital,top_outlet_cbc,CBC,13.27,Top 5 news outlets,24,Apr-24
 2024,Apr,Digital,top_outlet_ctv,CTV,24.23,Top 5 news outlets,24,Apr-24
@@ -505,6 +541,22 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,top_news_platform_twitter,X,21.25,Top social media platforms - news outlets,24,Sep-24
 2024,Sep,Digital,top_news_platform_youtube,YouTube,10.4,Top social media platforms - news outlets,24,Sep-24
 2024,Sep,Digital,top_outlet_blogto,blogTO,10.13,Top 5 news outlets,24,Sep-24
+2024,Dec,Digital,top_outlet_aptn,APTN,2.94,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_cbc,CBC,34.08,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_ctv,CTV,28.78,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_fuck no mtl,Fuck No Mtl,1.8,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_global news,Global News,3.05,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_news_platform_instagram,Instagram,8.79,Top social media platforms - news outlets,24,Dec-24
+2024,Dec,Digital,local_news_local,Local,22.62,Local vs national news engagement,24,Dec-24
+2024,Dec,Digital,top_outlet_narcity,Narcity,4.16,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,local_news_national,National,77.38,Local vs national news engagement,24,Dec-24
+2024,Dec,Digital,top_outlet_rebel news,Rebel News,2.04,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_news_platform_tiktok,TikTok,65.1,Top social media platforms - news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_toronto sun,Toronto Sun,2.77,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_true north,True North,2.01,Top 5 news outlets,24,Dec-24
+2024,Dec,Digital,top_news_platform_twitter,X,14.96,Top social media platforms - news outlets,24,Dec-24
+2024,Dec,Digital,top_news_platform_youtube,YouTube,11.15,Top social media platforms - news outlets,24,Dec-24
+2024,Dec,Digital,top_outlet_blogto,blogTO,2.21,Top 5 news outlets,24,Dec-24
 2024,Apr,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.39,Engagement with party leaders,24,Apr-24
 2024,Apr,Digital,party_member_Bloc Québécois,Bloc Québécois,1.59,Engagement with elected party members,24,Apr-24
 2024,Apr,Digital,party_leader_Conservative,Conservative,68.13,Engagement with party leaders,24,Apr-24
@@ -681,3 +733,19 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,politician_platform_TikTok,TikTok,5.47,Top social media platforms - politicians,24,Sep-24
 2024,Sep,Digital,politician_platform_Twitter,X,40.91,Top social media platforms - politicians,24,Sep-24
 2024,Sep,Digital,politician_platform_YouTube,YouTube,2.8,Top social media platforms - politicians,24,Sep-24
+2024,Dec,Digital,party_leader_Bloc Québécois,Bloc Québécois,0.08,Engagement with party leaders,24,Dec-24
+2024,Dec,Digital,party_member_Bloc Québécois,Bloc Québécois,0.97,Engagement with elected party members,24,Dec-24
+2024,Dec,Digital,party_leader_Conservative,Conservative,72.23,Engagement with party leaders,24,Dec-24
+2024,Dec,Digital,party_member_Conservative,Conservative,62.29,Engagement with elected party members,24,Dec-24
+2024,Dec,Digital,party_leader_Green,Green,0.1,Engagement with party leaders,24,Dec-24
+2024,Dec,Digital,party_member_Green,Green,0.55,Engagement with elected party members,24,Dec-24
+2024,Dec,Digital,politician_platform_Instagram,Instagram,47.49,Top social media platforms - politicians,24,Dec-24
+2024,Dec,Digital,party_leader_Liberal,Liberal,19.72,Engagement with party leaders,24,Dec-24
+2024,Dec,Digital,party_member_Liberal,Liberal,18,Engagement with elected party members,24,Dec-24
+2024,Dec,Digital,party_leader_NDP,NDP,7.87,Engagement with party leaders,24,Dec-24
+2024,Dec,Digital,party_member_NDP,NDP,18.19,Engagement with elected party members,24,Dec-24
+2024,Dec,Digital,engagement_type_2cat_news outlet,News outlet,59.29,Engagement with politicians vs news,24,Dec-24
+2024,Dec,Digital,engagement_type_2cat_politician,Politician,40.71,Engagement with politicians vs news,24,Dec-24
+2024,Dec,Digital,politician_platform_TikTok,TikTok,1.48,Top social media platforms - politicians,24,Dec-24
+2024,Dec,Digital,politician_platform_Twitter,X,46.37,Top social media platforms - politicians,24,Dec-24
+2024,Dec,Digital,politician_platform_YouTube,YouTube,4.66,Top social media platforms - politicians,24,Dec-24

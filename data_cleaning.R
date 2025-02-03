@@ -5,10 +5,11 @@ suppressPackageStartupMessages({
 })
  
 # data file from Aengus from December 5   
-df_DT <- read_csv("sitrep_measures_DT.csv")
+df_DT <- read_csv("sitrep_measures_DT.csv") |>
+  bind_rows(read_csv("sitrep_measures_NEW.csv")) 
 
 # data file from Chris from November 25
-df_survey <- read_csv("sitrep_measures.csv") |>
+df_survey <- read_csv("sitrep_measures_jan.csv") |>
   filter(source == "Survey") |>
   mutate(section = as.numeric(section),
          number = as.numeric(number)) |>
@@ -18,13 +19,16 @@ df_survey <- read_csv("sitrep_measures.csv") |>
              value %in% c(41.25117676,40.81673482))) |>
   filter(!(measure == "Misinformation_concern" &
              title == "Concern about generative AI")) |>
-  # remove the news avoidance April data because the question changed in May
+  # remove the news avoidance and seeking April data because the question changed in May
   filter(!(measure == "avoidance" &
              month == "apr")) |>
+  filter(!(measure == "seeking" &
+             month == "apr")) |>
+  filter(!(month %in% c("aug","jul") &
+             value %in% c(38.92944998, 37.13552564))) |>
   distinct()
   
   
-
 df <- df_DT |>
   bind_rows(df_survey)
 
@@ -55,18 +59,6 @@ df_vulnerability <- df |>
     month = factor(month, levels = month.abb, labels = month.abb, ordered = TRUE),
     year_new = str_replace_all(year,"20",""),
     month_year = paste0(month,"-",year_new),
-    month_year = factor(month_year,
-                        levels = c("Jan-24",
-                                   "Feb-24",
-                                   "Mar-24",
-                                   "Apr-24",
-                                   "May-24",
-                                   "Jun-24",
-                                   "Jul-24",
-                                   "Aug-24",
-                                   "Sep-24",
-                                   "Oct-24",
-                                   "Nov-24")),
     value = ifelse(title == "Toxic speech", round(value,5), 
                    ifelse(title == "Insularity", round(value, 4),round(value,2))),
     #update labels for the graph
@@ -120,18 +112,6 @@ df_threats <- df |>
     month = factor(month, levels = month.abb, labels = month.abb, ordered = TRUE),
     year_new = str_replace_all(year,"20",""),
     month_year = paste0(month,"-",year_new),
-    month_year = factor(month_year,
-                        levels = c("Jan-24",
-                                   "Feb-24",
-                                   "Mar-24",
-                                   "Apr-24",
-                                   "May-24",
-                                   "Jun-24",
-                                   "Jul-24",
-                                   "Aug-24",
-                                   "Sep-24",
-                                   "Oct-24",
-                                   "Nov-24")),
     value = round(value, 2),
     #update labels for the graph
     label = case_match(
@@ -184,18 +164,6 @@ df_news_engagement <- df |>
     month = factor(month, levels = month.abb, labels = month.abb, ordered = TRUE),
     year_new = str_replace_all(year,"20",""),
     month_year = paste0(month,"-",year_new),
-    month_year = factor(month_year,
-                        levels = c("Jan-24",
-                                   "Feb-24",
-                                   "Mar-24",
-                                   "Apr-24",
-                                   "May-24",
-                                   "Jun-24",
-                                   "Jul-24",
-                                   "Aug-24",
-                                   "Sep-24",
-                                   "Oct-24",
-                                   "Nov-24")),
     value = round(value, 2),
     #update labels for the graph
     label = case_match(
@@ -244,18 +212,6 @@ df_news_outlet <- df |>
     month = factor(month, levels = month.abb, labels = month.abb, ordered = TRUE),
     year_new = str_replace_all(year,"20",""),
     month_year = paste0(month,"-",year_new),
-    month_year = factor(month_year,
-                        levels = c("Jan-24",
-                                   "Feb-24",
-                                   "Mar-24",
-                                   "Apr-24",
-                                   "May-24",
-                                   "Jun-24",
-                                   "Jul-24",
-                                   "Aug-24",
-                                   "Sep-24",
-                                   "Oct-24",
-                                   "Nov-24")),
     value = round(value, 2),
     label = case_match(
       measure,
@@ -298,18 +254,6 @@ df_politicians <- df |>
     month = factor(month, levels = month.abb, labels = month.abb, ordered = TRUE),
     year_new = str_replace_all(year,"20",""),
     month_year = paste0(month,"-",year_new),
-    month_year = factor(month_year,
-                        levels = c("Jan-24",
-                                   "Feb-24",
-                                   "Mar-24",
-                                   "Apr-24",
-                                   "May-24",
-                                   "Jun-24",
-                                   "Jul-24",
-                                   "Aug-24",
-                                   "Sep-24",
-                                   "Oct-24",
-                                   "Nov-24")),
     value = round(value, 2),
     label = str_replace(label, "News Outlet", "News outlet"),
     label = case_match(
@@ -335,4 +279,9 @@ df_app <- df_vulnerability |>
   bind_rows(df_politicians)
 
 write_csv(df_app, "df_app.csv")
+
+
+
+
+
 

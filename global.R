@@ -61,7 +61,6 @@ survey <- c("Division",
             "Sources of weekly news",
             "Social media for news")
 
-
 # fonts
 # already imported from the url
 #font_add_google("Poppins", "poppins")
@@ -144,7 +143,8 @@ color_list <- list(
   "Toronto Star" = party_colors[[8]], 
   "Global News" = meo_colors[[8]],
   "Now Toronto" = meo_colors[[5]], 
-  "Narcity" = meo_colors[[5]],
+  "Narcity" = meo_colors[[6]],
+  "APTN" = meo_colors[[4]],
   "Instagram" = social_media[[1]],
   "TikTok" = social_media[[2]],
   "X" = social_media[[3]],
