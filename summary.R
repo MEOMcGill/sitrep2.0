@@ -41,7 +41,7 @@ df_summary <- df_app |>
   mutate(current_month = ifelse(title %in% list_percent, paste0(value, "%"), value),
          six_month_average = ifelse(title %in% list_percent, paste0(avg, "%"), avg)) |>
   # manually add the values for toxic speech and insularity averages
-  mutate(six_month_average = ifelse(title == "Toxic speech", 0.0266, six_month_average),
+  mutate(six_month_average = ifelse(title == "Toxic speech", 0.026, six_month_average),
          six_month_average = case_when(
            (title == "Insularity") & (label == "Conservative") ~ "0.0627",
            (title == "Insularity") & (label == "Liberal") ~ "0.132",

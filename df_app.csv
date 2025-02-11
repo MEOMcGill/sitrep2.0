@@ -78,9 +78,10 @@ year,month,source,measure,label,value,title,year_new,month_year
 2024,Sep,Digital,news_inequality,News inequality,0.96,Inequality,24,Sep-24
 2024,Dec,Digital,overall_inequality,Overall inequality,0.93,Inequality,24,Dec-24
 2024,Dec,Digital,segmentation,Segmentation,0.7,Segmentation,24,Dec-24
-2024,Dec,Digital,insularity_cpc,Conservative,0.0567,Insularity,24,Dec-24
-2024,Dec,Digital,insularity_lpc,Liberal,0.1259,Insularity,24,Dec-24
-2024,Dec,Digital,insularity_ndp,NDP,0.1111,Insularity,24,Dec-24
+2024,Dec,Digital,toxicity,Toxicity,0.02432,Toxic speech,24,Dec-24
+2024,Dec,Digital,insularity_cpc,Conservative,0.0565,Insularity,24,Dec-24
+2024,Dec,Digital,insularity_lpc,Liberal,0.1262,Insularity,24,Dec-24
+2024,Dec,Digital,insularity_ndp,NDP,0.1109,Insularity,24,Dec-24
 2024,Dec,Digital,news_inequality,News inequality,0.97,Inequality,24,Dec-24
 2024,Aug,Survey,avoidance,News avoidance,30.04,News avoidance,24,Aug-24
 2024,Aug,Survey,chilled,Chilled speech,64.44,Chilled speech,24,Aug-24

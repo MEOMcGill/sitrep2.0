@@ -1,15 +1,16 @@
 year,month,source,section,number,measure,label,value,shown_value,title,caption,img_label
 2024,dec,Digital,2,1,overall_inequality,"",0.93444841986977,0.934,Inequality,How skewed is the CIE towards a small set of accounts?,0 Low 1 High
-2024,dec,Digital,2,2,segmentation,"",0.701217131019478,0.7,Segmentation,How divided into distinct communities is the CIE?,0 Low 1 High
-2024,dec,Digital,2,3,insularity_cpc,Conservative,0.0566918273384784,0.057,Insularity,How insular are parties relative to one another?,Less More
-2024,dec,Digital,2,3,insularity_lpc,Liberal,0.125891712941876,0.126,Insularity,How insular are parties relative to one another?,Less More
-2024,dec,Digital,2,3,insularity_ndp,NDP,0.11112897741958,0.111,Insularity,How insular are parties relative to one another?,Less More
+2024,dec,Digital,2,2,segmentation,"",0.699300963597124,0.7,Segmentation,How divided into distinct communities is the CIE?,0 Low 1 High
+2024,dec,Digital,2,5,toxicity,"",0.0243168084310416,0.024,Toxic speech,How prevalent is toxic speech in the CIE?,Less More
+2024,dec,Digital,2,3,insularity_cpc,Conservative,0.0564779130103254,0.056,Insularity,How insular are parties relative to one another?,Less More
+2024,dec,Digital,2,3,insularity_lpc,Liberal,0.126217171887004,0.126,Insularity,How insular are parties relative to one another?,Less More
+2024,dec,Digital,2,3,insularity_ndp,NDP,0.110893343948648,0.111,Insularity,How insular are parties relative to one another?,Less More
 2024,dec,Digital,3,1,misinfo_references,"",0.20541128138522,0.205%,Discussion about misinformation and foreign interference,How often do people post about misinformation and foreign interference?,""
-2024,dec,Digital,3,5,from_china,China,0.948401076523998,0.95,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
-2024,dec,Digital,3,5,from_india,India,7.63174504739528,7.63,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
+2024,dec,Digital,3,5,from_china,China,0.963361343635735,0.96,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
+2024,dec,Digital,3,5,from_india,India,7.6315027351089,7.63,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
 2024,dec,Digital,3,4,misinfo_link_engagement,Percentage engagement,6.16360048916635,6.16%,Linking to known misinformation websites,How common and popular are web links to known misinformation websites?,""
 2024,dec,Digital,3,3,misinfo_links,Percentage links,1.88829833885878,1.89%,Linking to known misinformation websites,How common and popular are web links to known misinformation websites?,""
-2024,dec,Digital,3,5,from_russia,Russia,0.467662908004886,0.47,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
+2024,dec,Digital,3,5,from_russia,Russia,0.473151234223524,0.47,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
 2024,dec,Digital,4,6,news_inequality,"",0.967650997962656,0.968,Inequality,How skewed is the CIE to a smallnumber of news outlets?,0 Low 1 High
 2024,dec,Digital,4,7,top_outlet_aptn,APTN,2.94054020977762,2.9%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
 2024,dec,Digital,4,12,party_leader_Bloc Québécois,Bloc Québécois,0.0807641258369196,0.1%,Engagement with party leaders,Which party leaders are most engaging with Canadians?,0 25 50 75 100

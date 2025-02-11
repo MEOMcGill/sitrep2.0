@@ -1,9 +1,10 @@
 title,label,current_month,six_month_average
 Inequality,Overall inequality,0.93,0.93
 Segmentation,Segmentation,0.7,0.67
-Insularity,Conservative,0.0567,0.0627
-Insularity,Liberal,0.1259,0.132
-Insularity,NDP,0.1111,0.125
+Toxic speech,Toxicity,0.02432,0.026
+Insularity,Conservative,0.0565,0.0627
+Insularity,Liberal,0.1262,0.132
+Insularity,NDP,0.1109,0.125
 Inequality,News inequality,0.97,0.96
 News avoidance,News avoidance,28.98%,30.27%
 Chilled speech,Chilled speech,63.09%,64.65%
