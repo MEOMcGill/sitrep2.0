@@ -1,0 +1,69 @@
+year,month,source,section,number,measure,label,value,shown_value,title,caption,img_label
+2025,jan,Digital,2,1,overall_inequality,"",0.941930541356194,0.942,Inequality,How skewed is the CIE towards a small set of accounts?,0 Low 1 High
+2025,jan,Digital,2,2,segmentation,"",0.673013243587371,0.67,Segmentation,How divided into distinct communities is the CIE?,0 Low 1 High
+2025,jan,Digital,2,3,insularity_cpc,Conservative,0.0642808363909302,0.064,Insularity,How insular are parties relative to one another?,Less More
+2025,jan,Digital,2,3,insularity_lpc,Liberal,0.137436401234132,0.137,Insularity,How insular are parties relative to one another?,Less More
+2025,jan,Digital,2,3,insularity_ndp,NDP,0.10931154017698,0.109,Insularity,How insular are parties relative to one another?,Less More
+2025,jan,Digital,3,1,misinfo_references,"",0.468272340124755,0.468%,Discussion about misinformation and foreign interference,How often do people post about misinformation and foreign interference?,""
+2025,jan,Digital,3,5,from_china,China,1.12289691801336,1.12,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
+2025,jan,Digital,3,5,from_india,India,9.00526392821692,9.01,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
+2025,jan,Digital,3,4,misinfo_link_engagement,Percentage engagement,5.19876942051934,5.2%,Linking to known misinformation websites,How common and popular are web links to known misinformation websites?,""
+2025,jan,Digital,3,3,misinfo_links,Percentage links,1.63849742521833,1.64%,Linking to known misinformation websites,How common and popular are web links to known misinformation websites?,""
+2025,jan,Digital,3,5,from_russia,Russia,0.499332335530252,0.5,Directed foreign influence,To what extent are overt foreign influencers impacting the CIE?,Less More
+2025,jan,Digital,4,6,news_inequality,"",0.96258933944338,0.963,Inequality,How skewed is the CIE to a smallnumber of news outlets?,0 Low 1 High
+2025,jan,Digital,4,12,party_leader_Bloc Québécois,Bloc Québécois,0.146768681761438,0.1%,Engagement with party leaders,Which party leaders are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,13,party_member_Bloc Québécois,Bloc Québécois,1.48908018630163,1.5%,Engagement with elected party members,Which elected party members are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_cbc,CBC,20.534336097663,20.5%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,7,top_outlet_ctv,CTV,28.9255188705564,28.9%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,12,party_leader_Conservative,Conservative,61.1943864788663,61.2%,Engagement with party leaders,Which party leaders are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,13,party_member_Conservative,Conservative,60.3430909293984,60.3%,Engagement with elected party members,Which elected party members are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_global news,Global News,4.25356557484737,4.3%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,12,party_leader_Green,Green,0.505066469807944,0.5%,Engagement with party leaders,Which party leaders are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,13,party_member_Green,Green,0.475903173067491,0.5%,Engagement with elected party members,Which elected party members are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,9,top_news_platform_instagram,Instagram,17.297527659435,17.3%,Social media platforms,Which social media platforms are most popular for news?,""
+2025,jan,Digital,4,11,politician_platform_Instagram,Instagram,42.8377636829531,42.8%,Social media platforms,Which social media platforms are most popular for Canadian politicians?,0 25 50 75 100
+2025,jan,Digital,4,12,party_leader_Liberal,Liberal,29.7187290227692,29.7%,Engagement with party leaders,Which party leaders are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,13,party_member_Liberal,Liberal,21.2469329541612,21.2%,Engagement with elected party members,Which elected party members are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,8,local_news_local,Local,32.5914074883013,32.6%,Top 5 Canadian news outlets,How skewed is preference for national versus local news?,0 25 50 75 100
+2025,jan,Digital,4,12,party_leader_NDP,NDP,8.43504934679507,8.4%,Engagement with party leaders,Which party leaders are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,13,party_member_NDP,NDP,16.4449927570713,16.4%,Engagement with elected party members,Which elected party members are most engaging with Canadians?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_narcity,Narcity,10.0837506138428,10.1%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,7,top_outlet_narcity quebec,Narcity Quebec,1.77497535468887,1.8%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,8,local_news_national,National,67.4085925116987,67.4%,Top 5 Canadian news outlets,How skewed is preference for national versus local news?,0 25 50 75 100
+2025,jan,Digital,4,10,engagement_type_2cat_news outlet,News Outlet,43.3864459445472,43.4%,Politicians vs. news engagement,How skewed is preference for politician versus news content?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_now toronto,Now Toronto,6.66684323425623,6.7%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,10,engagement_type_2cat_politician,Politician,56.6135540554528,56.6%,Politicians vs. news engagement,How skewed is preference for politician versus news content?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_rebel news,Rebel News,2.67314606909774,2.7%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,9,top_news_platform_telegram,Telegram,0.000492016405711285,0%,Social media platforms,Which social media platforms are most popular for news?,""
+2025,jan,Digital,4,7,top_outlet_the national,The National,2.61395754233409,2.6%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,9,top_news_platform_tiktok,TikTok,50.786906961896,50.8%,Social media platforms,Which social media platforms are most popular for news?,""
+2025,jan,Digital,4,11,politician_platform_TikTok,TikTok,0.806456271189704,0.8%,Social media platforms,Which social media platforms are most popular for Canadian politicians?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_toronto sun,Toronto Sun,2.79880915280323,2.8%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,4,9,top_news_platform_twitter,Twitter,11.5929533619743,11.6%,Social media platforms,Which social media platforms are most popular for news?,""
+2025,jan,Digital,4,11,politician_platform_Twitter,Twitter,52.2035206397546,52.2%,Social media platforms,Which social media platforms are most popular for Canadian politicians?,0 25 50 75 100
+2025,jan,Digital,4,9,top_news_platform_youtube,YouTube,20.3221200002889,20.3%,Social media platforms,Which social media platforms are most popular for news?,""
+2025,jan,Digital,4,11,politician_platform_YouTube,YouTube,4.15225940610263,4.2%,Social media platforms,Which social media platforms are most popular for Canadian politicians?,0 25 50 75 100
+2025,jan,Digital,4,7,top_outlet_blogto,blogTO,1.68422449892055,1.7%,Top 5 Canadian news outlets,What are the top 5 Canadian news outlets? What is their share of total engagement?,""
+2025,jan,Digital,,,num_posts,"",396137,396137,"","",""
+2025,jan,Digital,,,unique_entities,"",3111,3111,"","",""
+2025,jan,Digital,,,unique_handles,"",5059,5059,"","",""
+2025,jan,Digital,,,start_date,"",2025-01-01,"","","",""
+2025,jan,Digital,,,end_date,"",2025-01-30,"","","",""
+2025,jan,Digital,,,engagement_Instagram,"",6991984,6991984,"","",""
+2025,jan,Digital,,,engagement_Telegram,"",47,47,"","",""
+2025,jan,Digital,,,engagement_TikTok,"",4951956,4951956,"","",""
+2025,jan,Digital,,,engagement_Twitter,"",7614474,7614474,"","",""
+2025,jan,Digital,,,engagement_YouTube,"",2458846,2458846,"","",""
+2025,jan,Digital,,,engagement_Overall,"",22017307,22017307,"","",""
+2025,jan,Digital,,,engagement_daily_Instagram,"",233066,233066,"","",""
+2025,jan,Digital,,,engagement_daily_Telegram,"",2,2,"","",""
+2025,jan,Digital,,,engagement_daily_TikTok,"",291292,291292,"","",""
+2025,jan,Digital,,,engagement_daily_Twitter,"",253816,253816,"","",""
+2025,jan,Digital,,,engagement_daily_YouTube,"",81962,81962,"","",""
+2025,jan,Digital,,,engagement_daily_Overall,"",860138,860138,"","",""
+2025,jan,Digital,,,engagement_daily_influencer_Instagram,"",411393,411393,"","",""
+2025,jan,Digital,,,engagement_daily_influencer_Telegram,"",258,258,"","",""
+2025,jan,Digital,,,engagement_daily_influencer_TikTok,"",202521,202521,"","",""
+2025,jan,Digital,,,engagement_daily_influencer_Twitter,"",932856,932856,"","",""
+2025,jan,Digital,,,engagement_daily_influencer_YouTube,"",66861,66861,"","",""
+2025,jan,Digital,,,engagement_daily_influencer_Overall,"",1613889,1613889,"","",""

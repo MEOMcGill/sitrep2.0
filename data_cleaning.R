@@ -5,11 +5,14 @@ suppressPackageStartupMessages({
 })
  
 # data file from Aengus from December 5   
-df_DT <- read_csv("sitrep_measures_DT.csv") |>
+#df_DT <- read_csv("sitrep_measures_DT.csv") |>
   bind_rows(read_csv("sitrep_measures_NEW.csv")) 
+  
+df_DT <- read_csv("sitrep_measures_DT_2024.csv") |>
+  bind_rows(read_csv("sitrep_measures_DT_2025.csv")) 
 
-# data file from Chris from November 25
-df_survey <- read_csv("sitrep_measures_jan.csv") |>
+# data file from Chris from February 12
+df_survey <- read_csv("sitrep_measures.csv") |>
   filter(source == "Survey") |>
   mutate(section = as.numeric(section),
          number = as.numeric(number)) |>
@@ -26,13 +29,12 @@ df_survey <- read_csv("sitrep_measures_jan.csv") |>
              month == "apr")) |>
   filter(!(month %in% c("aug","jul") &
              value %in% c(38.92944998, 37.13552564))) |>
-  distinct()
-  
+  distinct(year, month, source, measure,label, title, .keep_all = TRUE)
   
 df <- df_DT |>
   bind_rows(df_survey)
 
-# clean and prepare data for vulnerability section
+#VULNERABILITY====================================================================================================================
 vulnerability <- c("Inequality",
                    "Segmentation",
                    "Insularity",
@@ -81,7 +83,7 @@ df_vulnerability <- df |>
 # save the latest csv and load the app directly from the clean .csv to make it faster
 write_csv(df_vulnerability, "df_vulnerability.csv")
 
-#===================================================================================================
+#THREATS===================================================================================================
 
 # clean and prepare data for threats
 
@@ -139,7 +141,7 @@ df_threats <- df |>
 # save the latest csv and load the app directly from the clean .csv to make it faster
 write_csv(df_threats, "df_threats.csv")
 
-#======================================================================================================
+#ENGAGEMENT-WITH-NEWS======================================================================================================
 
 # clean and prepare data for engagement with news
 
@@ -180,7 +182,7 @@ df_news_engagement <- df |>
 # save the latest csv and load the app directly from the clean .csv to make it faster
 write_csv(df_news_engagement, "df_news_engagement.csv")
 
-#=======================================================================================================
+#ENGAGEMENT-WITH-NEWS-OUTLETS=======================================================================================================
 
 # clean and prepare data for engagement with news outlets
 
@@ -224,7 +226,7 @@ df_news_outlet <- df |>
 # save the latest csv and load the app directly from the clean .csv to make it faster
 write_csv(df_news_outlet, "df_news_outlet.csv")
 
-#=======================================================================================================
+#ENGAGEMENT-WITH-POLITICIANS=======================================================================================================
 
 # clean and prepare data for engagement with politicians
 
@@ -268,7 +270,7 @@ df_politicians <- df |>
 # save the latest csv and load the app directly from the clean .csv to make it faster
 write_csv(df_politicians, "df_politicians.csv")
 
-#=======================================================================================================
+#FINAL-DATASET-FOR-APP=======================================================================================================
 
 # Final dataset used in the app after data cleaning
 
@@ -276,7 +278,15 @@ df_app <- df_vulnerability |>
   bind_rows(df_threats) |>
   bind_rows(df_news_engagement) |>
   bind_rows(df_news_outlet) |>
-  bind_rows(df_politicians)
+  bind_rows(df_politicians) 
+
+|>
+  filter(!(measure == "chilled" &
+             value == 65.51)) |>
+  filter(!(measure == "division" &
+             value == 24.20)) |>
+  filter(!(measure == "avoidance" &
+             value == 31.74))
 
 write_csv(df_app, "df_app.csv")
 

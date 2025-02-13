@@ -2,9 +2,9 @@
 
 library(tidyverse)
 
-this_month <- "Dec-24"
+this_month <- "Jan-25"
 
-six_months <- c("Dec-24","Nov-24","Oct-24", "Sep-24", "Aug-24", "Jul-24")
+six_months <- c("Jan-25","Dec-24","Nov-24","Oct-24", "Sep-24", "Aug-24")
 
 list_percent <- c("Division",
                   "News avoidance",
@@ -43,8 +43,8 @@ df_summary <- df_app |>
   # manually add the values for toxic speech and insularity averages
   mutate(six_month_average = ifelse(title == "Toxic speech", 0.026, six_month_average),
          six_month_average = case_when(
-           (title == "Insularity") & (label == "Conservative") ~ "0.0627",
-           (title == "Insularity") & (label == "Liberal") ~ "0.132",
+           (title == "Insularity") & (label == "Conservative") ~ "0.0616",
+           (title == "Insularity") & (label == "Liberal") ~ "0.13",
            (title == "Insularity") & (label == "NDP") ~ "0.125",
            .default = six_month_average
          )) |>
@@ -52,9 +52,9 @@ df_summary <- df_app |>
   # remove the bottom 5 from the current month summary
   filter(!label %in% c("Rebel News",
                     "Toronto Sun",
-                    "True North",
+                    "The National",
                     "blogTO",
-                    "Fuck No Mtl"))
+                    "Narcity Quebec"))
 
 write_csv(df_summary, "df_summary.csv")
 
@@ -62,14 +62,14 @@ write_csv(df_summary, "df_summary.csv")
 
 df |>
   filter(title == "Toxic speech") |>
-  filter(month %in% c("dec","nov","oct","sep","aug","jul")) |>
+  filter(month %in% c(,"dec","nov","oct","sep","aug","jul")) |>
   select(value) |> 
   mutate(value = as.numeric(value)) |>
   mutate(avg = mean(value))
 
-df |>
+df_app |>
   filter(title == "Insularity") |>
-  filter(month %in% c("dec","nov","oct","sep","aug","jul")) |>
+  filter(month_year %in% six_months) |>
   group_by(label) |>
   select(value) |> 
   mutate(value = as.numeric(value)) |>
